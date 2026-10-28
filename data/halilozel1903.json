@@ -1,0 +1,4316 @@
+{
+  "schemaVersion": 3,
+  "username": "halilozel1903",
+  "generatedAt": "2026-10-28T17:32:40.298Z",
+  "truncated": false,
+  "legacyRepositoryNames": [
+    "SwingExamples",
+    "CSharpExamples",
+    "KotlinExample",
+    "JavaExamples",
+    "AndroidShareExample",
+    "Swift-Calculate-Example",
+    "Swift-GestureRecognizer",
+    "TerminalKomutlari",
+    "OtelOtomasyonu",
+    "MoonWeight",
+    "Swift101",
+    "KotlinTutorials",
+    "iOSProjects",
+    "SocialMedia",
+    "CatchTheFruits",
+    "RetrofitApp",
+    "StonePaperScissorsGame",
+    "AndroidProjects",
+    "YemekTarifleriApp",
+    "RecyclerView",
+    "Ulkeler",
+    "KotlinObjectOrientedProgramming",
+    "SoundApp",
+    "WeatherApp",
+    "ChatApp",
+    "TicTacToeGame",
+    "QuizApp",
+    "CurrencyConvertor",
+    "RGBtoHexColorConverter",
+    "AdMobApp",
+    "AdMob",
+    "SimpleWeatherApp",
+    "NavigationDrawerApp",
+    "CoderSwagApp",
+    "UlkeleriTaniyalimApp",
+    "Swift4.2IleiOS12UygulamaGelistirme",
+    "ObjcetOrientedProgramming",
+    "ZooApp",
+    "SwiftProgramming",
+    "RollDiceGame",
+    "TurkiyeninIlleriApp",
+    "iOSObjectOrientedProgramming",
+    "iOSComponentsProgrammatically",
+    "iOS12Applications",
+    "Animals",
+    "Developing-iOS-12-Apps-with-Swift",
+    "CatchTheFruitsApp",
+    "DovizApp",
+    "ListApp",
+    "SwiftProgrammingLanguage",
+    "AdMobApps",
+    "YazilimSanati-iOS",
+    "AdMobInterstitialAds",
+    "AndroidBluetoothChatApp",
+    "PictureinPictureApp",
+    "SwiftVideoTutorial",
+    "AppleTVApp",
+    "AndroidTVApp",
+    "LondonLandmarks",
+    "Kotlin-YazilimCenneti",
+    "IstanbulLandmarks",
+    "AppleTVPopularMovies",
+    "AndroidTVMovieParadise",
+    "KotlinDersleri",
+    "ExoPlayerDemo",
+    "Covid19Stats",
+    "PhotosApp",
+    "halilozel1903",
+    "LearnKotlinProgramming",
+    "MovieDB",
+    "ExoPlayerDrm",
+    "HuaweiMapKitApp",
+    "HuaweiPushKitApp",
+    "FlatListApp",
+    "UnsplashExample",
+    "Coroutines101",
+    "BuildVariantApp",
+    "SwiftTutorial2022",
+    "ExoPlayerScreenLock",
+    "DarkMode",
+    "ExoPlayerDashSample",
+    "ExoPlayerMP4Sample",
+    "RoomExample",
+    "KotlinLeapYear",
+    "KotlinPrimeNumber",
+    "KotlinPalindromeNumber",
+    "KotlinFibonacciSeries",
+    "KotlinPerfectNumber",
+    "KotlinSmithNumber",
+    "SwiftLeapYear",
+    "SwiftPrimeNumber",
+    "Media3Sample",
+    "FlowSample",
+    "VideoPlayerComposeSample",
+    "KotlinCaesarAlgorithm",
+    "LazycolumnDataGrid",
+    "XoxGame",
+    "WeatherApplication",
+    "GradeMate",
+    "ChristmasApp"
+  ],
+  "completeLanguages": true,
+  "user": {
+    "login": "halilozel1903",
+    "name": "Halil Özel",
+    "avatar": "https://avatars.githubusercontent.com/u/22895813?v=4",
+    "bio": "Android Developer 👨🏻‍💻",
+    "followers": 770,
+    "publicRepos": 240,
+    "url": "https://github.com/halilozel1903"
+  },
+  "repos": [
+    {
+      "name": "halil-hodja",
+      "created_at": "2026-10-28T17:20:32Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-28T17:23:13Z",
+      "language": "JavaScript",
+      "languages": {
+        "TypeScript": 54000,
+        "CSS": 26089,
+        "JavaScript": 80594,
+        "Shell": 18059
+      }
+    },
+    {
+      "name": "halilozel1903",
+      "created_at": "2020-07-09T11:36:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 8,
+      "pushed_at": "2026-10-28T17:12:21Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "SunriseKit",
+      "created_at": "2026-10-19T18:06:21Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-26T17:18:50Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 145261,
+        "Shell": 11193
+      }
+    },
+    {
+      "name": "RadioBrowserKit",
+      "created_at": "2026-10-19T18:05:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-26T12:21:48Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 146202,
+        "Shell": 15582
+      }
+    },
+    {
+      "name": "picsum-kotlin",
+      "created_at": "2026-10-19T18:06:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-26T12:17:09Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 60219,
+        "Shell": 7769
+      }
+    },
+    {
+      "name": "RangeSlider",
+      "created_at": "2026-10-19T18:06:39Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-26T12:17:03Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 104561,
+        "Shell": 16668
+      }
+    },
+    {
+      "name": "DovizApp",
+      "created_at": "2019-02-05T18:25:18Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-25T14:15:23Z",
+      "language": "Java",
+      "languages": {
+        "Java": 4797
+      }
+    },
+    {
+      "name": "FlatListApp",
+      "created_at": "2021-01-06T08:47:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-24T13:56:39Z",
+      "language": "JavaScript",
+      "languages": {
+        "JavaScript": 13016,
+        "Starlark": 1922,
+        "Java": 6230,
+        "Ruby": 791,
+        "Objective-C": 4436
+      }
+    },
+    {
+      "name": "TicTacToeGame",
+      "created_at": "2018-08-18T18:35:44Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 5,
+      "forks_count": 0,
+      "pushed_at": "2026-10-23T05:31:11Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 10976
+      }
+    },
+    {
+      "name": "StonePaperScissorsGame",
+      "created_at": "2018-07-20T13:58:58Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 16,
+      "forks_count": 2,
+      "pushed_at": "2026-10-22T06:32:47Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 8698
+      }
+    },
+    {
+      "name": "RollDiceGame",
+      "created_at": "2018-10-11T19:01:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 5,
+      "forks_count": 2,
+      "pushed_at": "2026-10-21T17:48:38Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 55580
+      }
+    },
+    {
+      "name": "SwipeActions",
+      "created_at": "2026-10-19T18:06:04Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T18:20:34Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 84090,
+        "Shell": 7996
+      }
+    },
+    {
+      "name": "spaceflight-news-kotlin",
+      "created_at": "2026-10-19T18:05:26Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T18:19:45Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 8670,
+        "Kotlin": 44497
+      }
+    },
+    {
+      "name": "coingecko-kotlin",
+      "created_at": "2026-10-19T18:05:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T18:16:31Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 86719,
+        "Shell": 8014
+      }
+    },
+    {
+      "name": "compose-expandable-text",
+      "created_at": "2026-10-19T18:06:14Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T18:07:51Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 48540,
+        "Shell": 8916
+      }
+    },
+    {
+      "name": "QuakeKit",
+      "created_at": "2026-10-19T18:05:12Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T13:28:34Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 163241,
+        "Shell": 13244
+      }
+    },
+    {
+      "name": "compose-number-picker",
+      "created_at": "2026-10-19T18:05:42Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T13:21:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 118433,
+        "Shell": 9182
+      }
+    },
+    {
+      "name": "compose-tag-input",
+      "created_at": "2026-10-19T18:04:42Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T13:09:28Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 9377,
+        "Kotlin": 93265
+      }
+    },
+    {
+      "name": "OpenTriviaKit",
+      "created_at": "2026-10-19T18:04:01Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T08:21:14Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 137522,
+        "Shell": 9319
+      }
+    },
+    {
+      "name": "freetogame-kotlin",
+      "created_at": "2026-10-19T18:04:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T08:19:19Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 46949,
+        "HTML": 638,
+        "Shell": 6160
+      }
+    },
+    {
+      "name": "CarouselKit",
+      "created_at": "2026-10-19T18:04:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T08:19:07Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 78443,
+        "Shell": 9714
+      }
+    },
+    {
+      "name": "dictionary-kotlin",
+      "created_at": "2026-10-19T18:03:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-20T03:05:56Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 69715,
+        "Shell": 9487
+      }
+    },
+    {
+      "name": "AudioWaveform",
+      "created_at": "2026-10-19T18:03:34Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T23:00:37Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 122861,
+        "Python": 9040,
+        "Shell": 11169
+      }
+    },
+    {
+      "name": "WikipediaKit",
+      "created_at": "2026-10-19T18:03:22Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T23:00:36Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 180191,
+        "Shell": 13084
+      }
+    },
+    {
+      "name": "MealDBKit",
+      "created_at": "2026-10-19T18:02:10Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T23:00:34Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 126993,
+        "Shell": 8123
+      }
+    },
+    {
+      "name": "MarkdownText",
+      "created_at": "2026-10-19T18:02:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T23:00:33Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 176977,
+        "Shell": 12914
+      }
+    },
+    {
+      "name": "openf1-kotlin",
+      "created_at": "2026-10-19T18:02:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T22:49:58Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 90164,
+        "Shell": 9473
+      }
+    },
+    {
+      "name": "compose-timeline",
+      "created_at": "2026-10-19T18:03:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T22:49:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 9072,
+        "Kotlin": 70945
+      }
+    },
+    {
+      "name": "compose-tv-guide",
+      "created_at": "2026-10-19T18:03:17Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T22:49:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 5775,
+        "Kotlin": 107778
+      }
+    },
+    {
+      "name": "CountriesKit",
+      "created_at": "2026-10-13T17:26:38Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T22:28:05Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 137985,
+        "Shell": 8852
+      }
+    },
+    {
+      "name": "MetMuseumKit",
+      "created_at": "2026-10-13T17:26:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T12:08:00Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 136948,
+        "Shell": 13014
+      }
+    },
+    {
+      "name": "compose-pip",
+      "created_at": "2026-10-13T17:26:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T12:07:56Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 57741,
+        "Python": 12710,
+        "Shell": 12796
+      }
+    },
+    {
+      "name": "ITunesSearchKit",
+      "created_at": "2026-10-13T17:25:10Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-19T12:07:55Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 207114,
+        "Shell": 13675
+      }
+    },
+    {
+      "name": "iOSComponentsProgrammatically",
+      "created_at": "2018-10-27T15:54:34Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-16T13:40:24Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 43211
+      }
+    },
+    {
+      "name": "jikan-kotlin",
+      "created_at": "2026-10-12T17:07:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:48Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 115608,
+        "Shell": 11921,
+        "PHP": 3404
+      }
+    },
+    {
+      "name": "open-library-kotlin",
+      "created_at": "2026-10-13T17:26:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:33Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 83292,
+        "Shell": 9082
+      }
+    },
+    {
+      "name": "openfoodfacts-kotlin",
+      "created_at": "2026-10-13T17:26:50Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:31Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 78643,
+        "Shell": 8908
+      }
+    },
+    {
+      "name": "compose-image-compare",
+      "created_at": "2026-10-13T17:26:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:29Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 67323,
+        "Python": 10172,
+        "Shell": 8839
+      }
+    },
+    {
+      "name": "TVProfilePicker",
+      "created_at": "2026-10-13T17:26:21Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:29Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 115652,
+        "Shell": 9688
+      }
+    },
+    {
+      "name": "EmptyStateKit",
+      "created_at": "2026-10-13T17:26:45Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:26Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 128888,
+        "Shell": 12931
+      }
+    },
+    {
+      "name": "HealthCards",
+      "created_at": "2026-10-13T17:25:50Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:25Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 154033,
+        "Shell": 11261
+      }
+    },
+    {
+      "name": "NASAKit",
+      "created_at": "2026-10-13T17:25:36Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:24Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 207823,
+        "Shell": 10016
+      }
+    },
+    {
+      "name": "FormKit",
+      "created_at": "2026-10-13T17:25:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-14T04:02:24Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 125577,
+        "Shell": 8411
+      }
+    },
+    {
+      "name": "frankfurter-kotlin",
+      "created_at": "2026-10-13T17:25:56Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T23:08:15Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 86491,
+        "Shell": 9064
+      }
+    },
+    {
+      "name": "prayer-times-kotlin",
+      "created_at": "2026-10-13T17:26:03Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T23:01:14Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 80141,
+        "Shell": 9256
+      }
+    },
+    {
+      "name": "compose-tv-search",
+      "created_at": "2026-10-13T17:25:30Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T23:01:12Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 4438,
+        "Kotlin": 120851
+      }
+    },
+    {
+      "name": "hackernews-kotlin",
+      "created_at": "2026-10-13T17:25:24Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T23:01:09Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 91457,
+        "Shell": 8866
+      }
+    },
+    {
+      "name": "deezer-kotlin",
+      "created_at": "2026-10-12T17:07:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T17:32:08Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 140573,
+        "Shell": 7444
+      }
+    },
+    {
+      "name": "iOSObjectOrientedProgramming",
+      "created_at": "2018-10-22T15:23:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-13T05:44:16Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 56736
+      }
+    },
+    {
+      "name": "LiveActivityKit",
+      "created_at": "2026-10-12T17:07:45Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:30Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 160579,
+        "Shell": 5538
+      }
+    },
+    {
+      "name": "compose-calendar",
+      "created_at": "2026-10-12T17:07:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:28Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 112115,
+        "Shell": 6858
+      }
+    },
+    {
+      "name": "OpenMeteoKit",
+      "created_at": "2026-10-12T17:07:37Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:23Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 196976,
+        "Shell": 10746
+      }
+    },
+    {
+      "name": "compose-sheets",
+      "created_at": "2026-10-12T17:07:31Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:20Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 8946,
+        "Kotlin": 85013
+      }
+    },
+    {
+      "name": "ComplicationKit",
+      "created_at": "2026-10-12T17:07:20Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:18Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 142533,
+        "Shell": 6173
+      }
+    },
+    {
+      "name": "RickAndMortyKit",
+      "created_at": "2026-10-12T17:07:14Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:15Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 180023,
+        "Shell": 8135
+      }
+    },
+    {
+      "name": "compose-wear-tiles",
+      "created_at": "2026-10-12T17:07:07Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:13Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 7517,
+        "Kotlin": 86064
+      }
+    },
+    {
+      "name": "pokeapi-kotlin",
+      "created_at": "2026-10-12T17:07:01Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:13Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 133280,
+        "Shell": 8027
+      }
+    },
+    {
+      "name": "SettingsPane",
+      "created_at": "2026-10-12T17:06:55Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:09Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 119064,
+        "Shell": 4899
+      }
+    },
+    {
+      "name": "TVMazeKit",
+      "created_at": "2026-10-12T17:06:41Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T22:47:08Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 195861,
+        "Shell": 9244
+      }
+    },
+    {
+      "name": "Swift-Calculate-Example",
+      "created_at": "2017-10-05T14:16:42Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-12T05:51:59Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 49005
+      }
+    },
+    {
+      "name": "Swift-GestureRecognizer",
+      "created_at": "2017-10-06T07:37:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-11T19:20:33Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 41031
+      }
+    },
+    {
+      "name": "HuaweiMapKitApp",
+      "created_at": "2020-10-24T18:24:18Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 4,
+      "forks_count": 1,
+      "pushed_at": "2026-10-07T20:05:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 26429
+      }
+    },
+    {
+      "name": "HuaweiPushKitApp",
+      "created_at": "2020-11-25T13:38:05Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 18,
+      "forks_count": 4,
+      "pushed_at": "2026-10-07T19:58:59Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 36945
+      }
+    },
+    {
+      "name": "WireLens",
+      "created_at": "2026-09-29T15:10:20Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:24Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 2621,
+        "Kotlin": 121028
+      }
+    },
+    {
+      "name": "compose-reorderable",
+      "created_at": "2026-09-29T15:37:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:12Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 86203,
+        "Shell": 6998
+      }
+    },
+    {
+      "name": "compose-signature-pad",
+      "created_at": "2026-09-29T15:37:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:09Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 6860,
+        "Kotlin": 115003
+      }
+    },
+    {
+      "name": "compose-wear-timer",
+      "created_at": "2026-09-29T15:37:04Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:06Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 7410,
+        "Kotlin": 114032
+      }
+    },
+    {
+      "name": "compose-color-picker",
+      "created_at": "2026-09-29T15:36:45Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:03Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 108382,
+        "Shell": 7078
+      }
+    },
+    {
+      "name": "compose-tv-player",
+      "created_at": "2026-09-29T15:36:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:40:00Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 4492,
+        "Kotlin": 128498
+      }
+    },
+    {
+      "name": "compose-adaptive-kit",
+      "created_at": "2026-09-29T15:36:24Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:57Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 85224,
+        "Shell": 6958
+      }
+    },
+    {
+      "name": "android-auto-kit",
+      "created_at": "2026-09-29T15:36:19Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 111638,
+        "Shell": 6675
+      }
+    },
+    {
+      "name": "compose-mini-charts",
+      "created_at": "2026-09-29T15:36:03Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:51Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 125616,
+        "Shell": 5793
+      }
+    },
+    {
+      "name": "compose-wear-kit",
+      "created_at": "2026-09-29T15:35:56Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:48Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 6320,
+        "Kotlin": 91468
+      }
+    },
+    {
+      "name": "compose-tv-rails",
+      "created_at": "2026-09-29T15:33:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:46Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 5126,
+        "Kotlin": 85877
+      }
+    },
+    {
+      "name": "compose-rating-bar",
+      "created_at": "2026-09-28T17:00:06Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:37Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 75632,
+        "Shell": 2617
+      }
+    },
+    {
+      "name": "compose-image-cropper",
+      "created_at": "2026-09-28T16:59:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:34Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 96403,
+        "Shell": 2626
+      }
+    },
+    {
+      "name": "PermissionFlow",
+      "created_at": "2026-09-27T08:13:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:31Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 70051,
+        "Shell": 2609
+      }
+    },
+    {
+      "name": "compose-swipe-cards",
+      "created_at": "2026-09-27T08:13:52Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:28Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 2609,
+        "Kotlin": 61814
+      }
+    },
+    {
+      "name": "ShakeReport",
+      "created_at": "2026-09-27T07:31:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:25Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 2684,
+        "Kotlin": 73806
+      }
+    },
+    {
+      "name": "compose-connectivity",
+      "created_at": "2026-09-27T07:31:44Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:22Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 48979,
+        "Shell": 2621
+      }
+    },
+    {
+      "name": "compose-spotlight",
+      "created_at": "2026-09-26T13:54:05Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:19Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 1664,
+        "Kotlin": 25462
+      }
+    },
+    {
+      "name": "ReviewNudge",
+      "created_at": "2026-09-26T13:53:20Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:39:16Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 32260,
+        "Shell": 1768
+      }
+    },
+    {
+      "name": "compose-toast",
+      "created_at": "2026-09-29T15:34:04Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:35:26Z",
+      "language": "Kotlin",
+      "languages": {
+        "Shell": 5462,
+        "Kotlin": 99650
+      }
+    },
+    {
+      "name": "compose-otp-field",
+      "created_at": "2026-09-29T15:37:35Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T16:32:02Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 98711,
+        "Shell": 6921
+      }
+    },
+    {
+      "name": "QRScannerKit",
+      "created_at": "2026-09-29T15:37:21Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:48:32Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 152579,
+        "Shell": 5976
+      }
+    },
+    {
+      "name": "ChatBubbles",
+      "created_at": "2026-09-29T15:37:15Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:48:28Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 135124,
+        "Shell": 10701
+      }
+    },
+    {
+      "name": "PlayerControls",
+      "created_at": "2026-09-29T15:36:30Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:39:05Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 166722,
+        "Shell": 8869
+      }
+    },
+    {
+      "name": "AdaptiveStack",
+      "created_at": "2026-09-29T15:36:35Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:39:01Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 94455,
+        "Shell": 12304
+      }
+    },
+    {
+      "name": "HapticKit",
+      "created_at": "2026-09-29T15:36:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:29:09Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 128439,
+        "Shell": 8136
+      }
+    },
+    {
+      "name": "ZoomableImage",
+      "created_at": "2026-09-29T15:36:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-06T03:29:06Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 120178,
+        "Shell": 10571
+      }
+    },
+    {
+      "name": "CoderSwagApp",
+      "created_at": "2018-09-19T16:05:23Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2026-10-05T05:53:45Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 3173
+      }
+    },
+    {
+      "name": "KotlinDersleri",
+      "created_at": "2020-02-02T17:45:06Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-04T15:42:58Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 4700
+      }
+    },
+    {
+      "name": "KotlinObjectOrientedProgramming",
+      "created_at": "2018-07-30T14:57:23Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-10-04T15:41:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 25171
+      }
+    },
+    {
+      "name": "LearnKotlinProgramming",
+      "created_at": "2020-07-11T13:07:06Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 8,
+      "forks_count": 1,
+      "pushed_at": "2026-10-04T14:33:25Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 19726
+      }
+    },
+    {
+      "name": "PaywallKit",
+      "created_at": "2026-09-29T15:36:14Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-02T08:00:45Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 136850,
+        "Shell": 5968
+      }
+    },
+    {
+      "name": "CommandPalette",
+      "created_at": "2026-09-29T15:36:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-02T03:32:44Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 109450,
+        "Shell": 8921
+      }
+    },
+    {
+      "name": "ExoPlayerDemo",
+      "created_at": "2020-03-14T16:19:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 72,
+      "forks_count": 12,
+      "pushed_at": "2026-10-01T08:43:36Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 22358
+      }
+    },
+    {
+      "name": "ExoPlayerDrm",
+      "created_at": "2020-09-19T14:17:14Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 48,
+      "forks_count": 13,
+      "pushed_at": "2026-10-01T08:42:36Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 35083
+      }
+    },
+    {
+      "name": "MenuBarKit",
+      "created_at": "2026-09-29T15:35:52Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-01T03:48:19Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 138612,
+        "Shell": 4534
+      }
+    },
+    {
+      "name": "WristKit",
+      "created_at": "2026-09-29T15:35:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-10-01T03:28:22Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 92684,
+        "Shell": 4928
+      }
+    },
+    {
+      "name": "TVShelfKit",
+      "created_at": "2026-09-29T15:33:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-30T03:50:42Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 105548,
+        "Shell": 3857
+      }
+    },
+    {
+      "name": "OnboardingKit",
+      "created_at": "2026-09-29T15:33:54Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-30T03:36:49Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 79109,
+        "Shell": 4458
+      }
+    },
+    {
+      "name": "NetTrace",
+      "created_at": "2026-09-28T16:59:53Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-29T03:29:57Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 110867,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "ConfettiKit",
+      "created_at": "2026-09-28T16:59:47Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-29T03:29:57Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 88527,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "ezan-vakti-macos",
+      "created_at": "2026-09-26T19:05:37Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-09-28T20:55:14Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 49168
+      }
+    },
+    {
+      "name": "android-tv-search-keyboard",
+      "created_at": "2026-09-21T18:37:24Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2026-09-28T20:53:06Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 55743
+      }
+    },
+    {
+      "name": "AppLock",
+      "created_at": "2026-09-27T08:13:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-28T16:57:09Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 97671,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "SkeletonKit",
+      "created_at": "2026-09-27T08:13:44Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-28T16:57:06Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 74231,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "AppleTVPopularMovies",
+      "created_at": "2019-08-30T17:01:05Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 5,
+      "forks_count": 4,
+      "pushed_at": "2026-09-27T13:40:54Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 87377
+      }
+    },
+    {
+      "name": "marquee",
+      "created_at": "2026-09-26T21:50:10Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-27T13:38:48Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 50972
+      }
+    },
+    {
+      "name": "UpdatePrompt",
+      "created_at": "2026-09-27T07:31:39Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-27T08:10:33Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 74490,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "CodeField",
+      "created_at": "2026-09-27T07:31:07Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-27T08:10:31Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 37478,
+        "Shell": 2029
+      }
+    },
+    {
+      "name": "SadeBlock",
+      "created_at": "2026-09-26T13:48:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-26T21:37:33Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 7074,
+        "Shell": 1972
+      }
+    },
+    {
+      "name": "LumaShade",
+      "created_at": "2026-09-26T18:16:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-26T19:00:56Z",
+      "language": "JavaScript",
+      "languages": {
+        "JavaScript": 15575,
+        "HTML": 10371,
+        "Swift": 3580,
+        "CSS": 387
+      }
+    },
+    {
+      "name": "StreamingText",
+      "created_at": "2026-09-26T13:53:02Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-26T15:00:42Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 30039,
+        "Shell": 1479
+      }
+    },
+    {
+      "name": "GlassToast",
+      "created_at": "2026-09-26T13:52:34Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-26T15:00:41Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 26142,
+        "Shell": 1479
+      }
+    },
+    {
+      "name": "VideoPlayerComposeSample",
+      "created_at": "2024-01-27T13:50:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2026-09-20T16:13:04Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 16878
+      }
+    },
+    {
+      "name": "AndroidTVApp",
+      "created_at": "2019-06-26T06:34:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 27,
+      "forks_count": 7,
+      "pushed_at": "2026-09-20T15:39:36Z",
+      "language": "Java",
+      "languages": {
+        "Java": 38337,
+        "Python": 3631
+      }
+    },
+    {
+      "name": "swift-lessons",
+      "created_at": "2026-09-17T16:56:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-09-17T17:01:53Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 10079,
+        "Shell": 677,
+        "Python": 3287
+      }
+    },
+    {
+      "name": "XoxGame",
+      "created_at": "2025-06-22T14:55:21Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-09-17T16:35:14Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 19156
+      }
+    },
+    {
+      "name": "CodeBlockView",
+      "created_at": "2026-09-17T16:05:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "pushed_at": "2026-09-17T16:15:15Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 10786
+      }
+    },
+    {
+      "name": "KotlinTutorials",
+      "created_at": "2018-06-20T07:50:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 117,
+      "forks_count": 21,
+      "pushed_at": "2026-09-12T15:09:18Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 45419
+      }
+    },
+    {
+      "name": "iOSProjects",
+      "created_at": "2018-06-28T13:41:41Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 150,
+      "forks_count": 32,
+      "pushed_at": "2026-07-09T08:23:47Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 298759,
+        "Ruby": 909
+      }
+    },
+    {
+      "name": "AndroidTVMovieParadise",
+      "created_at": "2019-12-01T16:45:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 221,
+      "forks_count": 71,
+      "pushed_at": "2026-07-04T22:30:32Z",
+      "language": "Java",
+      "languages": {
+        "Java": 218964,
+        "Shell": 2038
+      }
+    },
+    {
+      "name": "KotlinPalindromeNumber",
+      "created_at": "2023-03-26T17:18:38Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-06-25T16:09:01Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 1372
+      }
+    },
+    {
+      "name": "CatchTheFruitsApp",
+      "created_at": "2018-12-13T17:24:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2026-06-24T20:58:38Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 6129
+      }
+    },
+    {
+      "name": "KotlinSmithNumber",
+      "created_at": "2023-04-15T21:44:02Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-06-19T05:28:02Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 2483
+      }
+    },
+    {
+      "name": "SwiftPrimeNumber",
+      "created_at": "2023-04-23T15:56:52Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-06-16T10:24:18Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 862
+      }
+    },
+    {
+      "name": "DarkMode",
+      "created_at": "2022-07-03T17:37:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 13,
+      "forks_count": 7,
+      "pushed_at": "2026-06-14T12:27:53Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 14890
+      }
+    },
+    {
+      "name": "AdMobApp",
+      "created_at": "2018-09-07T13:26:02Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 55,
+      "forks_count": 16,
+      "pushed_at": "2026-06-10T17:03:35Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 5569
+      }
+    },
+    {
+      "name": "Swift101",
+      "created_at": "2018-06-11T10:30:53Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 99,
+      "forks_count": 7,
+      "pushed_at": "2026-06-04T12:15:46Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 41783
+      }
+    },
+    {
+      "name": "PictureinPictureApp",
+      "created_at": "2019-06-12T14:59:56Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 40,
+      "forks_count": 6,
+      "pushed_at": "2026-06-02T14:53:53Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 5482
+      }
+    },
+    {
+      "name": "ExoPlayerMP4Sample",
+      "created_at": "2023-02-02T20:30:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 7,
+      "forks_count": 2,
+      "pushed_at": "2026-06-02T11:59:46Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 2603
+      }
+    },
+    {
+      "name": "Media3Sample",
+      "created_at": "2023-11-18T14:07:18Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 11,
+      "forks_count": 1,
+      "pushed_at": "2026-06-01T16:39:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 3706
+      }
+    },
+    {
+      "name": "RGBtoHexColorConverter",
+      "created_at": "2018-09-05T20:15:13Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2026-06-01T16:36:19Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 8505
+      }
+    },
+    {
+      "name": "SwingExamples",
+      "created_at": "2017-05-11T12:49:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-06-01T16:03:59Z",
+      "language": "Java",
+      "languages": {
+        "Java": 47811
+      }
+    },
+    {
+      "name": "MovieDB",
+      "created_at": "2020-07-15T08:22:32Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 10,
+      "forks_count": 8,
+      "pushed_at": "2026-05-31T15:05:56Z",
+      "language": "Kotlin",
+      "languages": {
+        "Java": 2942,
+        "Kotlin": 285165
+      }
+    },
+    {
+      "name": "ExoPlayerScreenLock",
+      "created_at": "2022-02-23T20:51:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 16,
+      "forks_count": 3,
+      "pushed_at": "2026-05-30T21:50:27Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 9037
+      }
+    },
+    {
+      "name": "Animals",
+      "created_at": "2018-11-18T21:13:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2026-05-29T09:51:30Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 9775
+      }
+    },
+    {
+      "name": "UnsplashExample",
+      "created_at": "2021-08-23T06:57:36Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 11,
+      "forks_count": 1,
+      "pushed_at": "2026-05-27T16:46:01Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 16123
+      }
+    },
+    {
+      "name": "KotlinPerfectNumber",
+      "created_at": "2023-04-07T19:11:30Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2026-04-05T14:50:16Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 2368
+      }
+    },
+    {
+      "name": "CatchTheFruits",
+      "created_at": "2018-07-06T15:28:30Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 31,
+      "forks_count": 13,
+      "pushed_at": "2026-04-04T17:01:44Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 3719
+      }
+    },
+    {
+      "name": "PhotosApp",
+      "created_at": "2020-07-05T18:12:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2026-02-20T19:18:04Z",
+      "language": "Java",
+      "languages": {
+        "Java": 56889
+      }
+    },
+    {
+      "name": "JavaExamples",
+      "created_at": "2017-07-17T16:55:58Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2025-12-31T19:39:24Z",
+      "language": "Java",
+      "languages": {
+        "Java": 88370,
+        "Shell": 942
+      }
+    },
+    {
+      "name": "ChristmasApp",
+      "created_at": "2025-11-21T12:10:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-11-21T12:10:26Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "KotlinLeapYear",
+      "created_at": "2023-03-19T18:55:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-11-11T07:28:27Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 12442
+      }
+    },
+    {
+      "name": "KotlinCaesarAlgorithm",
+      "created_at": "2024-03-30T10:19:05Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2025-10-27T12:55:31Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 4467
+      }
+    },
+    {
+      "name": "Kotlin-YazilimCenneti",
+      "created_at": "2019-08-04T14:59:30Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-10-24T20:49:41Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 3027
+      }
+    },
+    {
+      "name": "Awesome-Android-TV-FOSS-Apps",
+      "created_at": "2025-05-31T19:27:42Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2025-09-28T04:17:16Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "TerminalKomutlari",
+      "created_at": "2017-12-07T11:00:26Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2025-09-22T09:12:26Z",
+      "language": "Java",
+      "languages": {
+        "Java": 93981
+      }
+    },
+    {
+      "name": "SwiftVideoTutorial",
+      "created_at": "2019-06-14T11:09:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 9,
+      "forks_count": 1,
+      "pushed_at": "2025-09-14T19:39:31Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 10864
+      }
+    },
+    {
+      "name": "SoundApp",
+      "created_at": "2018-07-31T21:14:52Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2025-08-20T06:19:21Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 3286
+      }
+    },
+    {
+      "name": "GradeMate",
+      "created_at": "2025-07-20T10:34:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-07-20T12:01:01Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 10404
+      }
+    },
+    {
+      "name": "WeatherApplication",
+      "created_at": "2025-07-08T19:38:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-07-11T21:04:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 17312
+      }
+    },
+    {
+      "name": "LazycolumnDataGrid",
+      "created_at": "2025-05-11T10:51:04Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-06-22T13:30:16Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 16578
+      }
+    },
+    {
+      "name": "Ulkeler",
+      "created_at": "2018-07-27T20:49:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "pushed_at": "2025-06-20T21:16:48Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 7524
+      }
+    },
+    {
+      "name": "SwiftTutorial2022",
+      "created_at": "2022-01-23T18:53:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2025-04-23T18:13:26Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 1814
+      }
+    },
+    {
+      "name": "Developing-iOS-12-Apps-with-Swift",
+      "created_at": "2018-11-19T14:26:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 2,
+      "pushed_at": "2025-04-02T13:16:30Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 10103
+      }
+    },
+    {
+      "name": "FlowSample",
+      "created_at": "2023-12-15T16:49:19Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2025-02-25T13:20:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 11014
+      }
+    },
+    {
+      "name": "Swift4.2IleiOS12UygulamaGelistirme",
+      "created_at": "2018-09-26T15:48:00Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2024-09-15T19:11:06Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 291
+      }
+    },
+    {
+      "name": "CSharpExamples",
+      "created_at": "2017-07-13T10:00:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 6,
+      "forks_count": 6,
+      "pushed_at": "2024-07-13T05:40:56Z",
+      "language": "C#",
+      "languages": {
+        "C#": 4239
+      }
+    },
+    {
+      "name": "ExoPlayerDashSample",
+      "created_at": "2022-08-30T21:00:37Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "pushed_at": "2024-06-09T18:26:15Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 2384
+      }
+    },
+    {
+      "name": "KotlinPrimeNumber",
+      "created_at": "2023-03-25T20:44:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2024-03-16T12:46:51Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 370
+      }
+    },
+    {
+      "name": "AdMobApps",
+      "created_at": "2019-02-23T12:49:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2024-03-07T17:06:19Z",
+      "language": "Java",
+      "languages": {
+        "Java": 1908
+      }
+    },
+    {
+      "name": "YemekTarifleriApp",
+      "created_at": "2018-07-24T09:22:04Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2024-02-08T16:56:50Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 15037
+      }
+    },
+    {
+      "name": "Covid19Stats",
+      "created_at": "2020-04-18T14:37:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 15,
+      "forks_count": 11,
+      "pushed_at": "2024-01-28T13:53:29Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 23937
+      }
+    },
+    {
+      "name": "RoomExample",
+      "created_at": "2023-02-05T15:17:07Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 3,
+      "forks_count": 0,
+      "pushed_at": "2024-01-01T10:09:37Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 6319
+      }
+    },
+    {
+      "name": "SocialMedia",
+      "created_at": "2018-06-29T08:30:42Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-12-18T11:16:26Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "Coroutines101",
+      "created_at": "2021-12-29T12:45:19Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 20,
+      "forks_count": 1,
+      "pushed_at": "2023-12-15T16:25:27Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 5559
+      }
+    },
+    {
+      "name": "BuildVariantApp",
+      "created_at": "2022-01-07T11:04:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 14,
+      "forks_count": 2,
+      "pushed_at": "2023-12-10T12:00:54Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 7737
+      }
+    },
+    {
+      "name": "WeatherApp",
+      "created_at": "2018-08-05T19:59:50Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2023-12-03T13:33:54Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 8949
+      }
+    },
+    {
+      "name": "SwiftProgramming",
+      "created_at": "2018-10-07T13:00:55Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-11-29T07:00:34Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 2926
+      }
+    },
+    {
+      "name": "AndroidBluetoothChatApp",
+      "created_at": "2019-04-27T20:27:01Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 47,
+      "forks_count": 22,
+      "pushed_at": "2023-11-26T11:12:48Z",
+      "language": "Java",
+      "languages": {
+        "Java": 15703
+      }
+    },
+    {
+      "name": "RetrofitApp",
+      "created_at": "2018-07-18T15:41:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 4,
+      "forks_count": 2,
+      "pushed_at": "2023-11-10T12:12:14Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 7254
+      }
+    },
+    {
+      "name": "KotlinFibonacciSeries",
+      "created_at": "2023-04-01T23:19:38Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-11-05T14:21:08Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 477
+      }
+    },
+    {
+      "name": "OtelOtomasyonu",
+      "created_at": "2017-12-25T13:38:51Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 1,
+      "pushed_at": "2023-10-13T08:28:30Z",
+      "language": "C#",
+      "languages": {
+        "C#": 35049
+      }
+    },
+    {
+      "name": "LondonLandmarks",
+      "created_at": "2019-07-21T12:07:24Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2023-10-05T06:14:18Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 8991
+      }
+    },
+    {
+      "name": "NavigationDrawerApp",
+      "created_at": "2018-09-16T21:51:31Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-09-23T13:01:22Z",
+      "language": "Java",
+      "languages": {
+        "Java": 8351
+      }
+    },
+    {
+      "name": "react-native-egitimi",
+      "created_at": "2021-02-10T12:40:13Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-08-25T05:48:50Z",
+      "language": "JavaScript",
+      "languages": {
+        "JavaScript": 110574,
+        "Java": 25430,
+        "Objective-C": 68228,
+        "Ruby": 3303,
+        "Starlark": 32710
+      }
+    },
+    {
+      "name": "ObjcetOrientedProgramming",
+      "created_at": "2018-09-28T18:39:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-08-09T06:08:51Z",
+      "language": "Java",
+      "languages": {
+        "Java": 29761
+      }
+    },
+    {
+      "name": "ListApp",
+      "created_at": "2019-02-05T21:51:00Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-07-10T06:22:32Z",
+      "language": "Java",
+      "languages": {
+        "Java": 2869
+      }
+    },
+    {
+      "name": "IstanbulLandmarks",
+      "created_at": "2019-08-18T20:10:56Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-05-15T22:24:29Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 8824
+      }
+    },
+    {
+      "name": "SwiftLeapYear",
+      "created_at": "2023-04-21T18:02:34Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-04-22T21:36:42Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 452
+      }
+    },
+    {
+      "name": "UlkeleriTaniyalimApp",
+      "created_at": "2018-09-22T21:48:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-02-20T21:03:05Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 6447
+      }
+    },
+    {
+      "name": "SimpleWeatherApp",
+      "created_at": "2018-09-12T16:08:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-02-16T05:57:49Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 12011
+      }
+    },
+    {
+      "name": "android-tv-program-guide",
+      "created_at": "2022-06-05T20:46:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 1,
+      "pushed_at": "2023-02-01T21:56:41Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 138465
+      }
+    },
+    {
+      "name": "SwiftKaynaklari",
+      "created_at": "2018-10-03T16:34:59Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 2,
+      "pushed_at": "2023-01-21T21:06:41Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 238
+      }
+    },
+    {
+      "name": "YazilimSanati-iOS",
+      "created_at": "2019-03-03T13:25:20Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-01-19T08:45:35Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 11907,
+        "Ruby": 308
+      }
+    },
+    {
+      "name": "KotlinExample",
+      "created_at": "2017-07-16T06:58:07Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 5,
+      "forks_count": 2,
+      "pushed_at": "2023-01-13T05:58:20Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 23462
+      }
+    },
+    {
+      "name": "iOS12Applications",
+      "created_at": "2018-11-04T21:37:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-01-12T05:40:48Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 4465
+      }
+    },
+    {
+      "name": "AdMobInterstitialAds",
+      "created_at": "2019-03-16T19:05:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-01-11T06:25:59Z",
+      "language": "Java",
+      "languages": {
+        "Java": 2299
+      }
+    },
+    {
+      "name": "RecyclerView",
+      "created_at": "2018-07-26T12:02:20Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2023-01-02T17:52:55Z",
+      "language": "Java",
+      "languages": {
+        "Java": 10885
+      }
+    },
+    {
+      "name": "AndroidProjects",
+      "created_at": "2018-07-23T14:58:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-12-27T18:17:15Z",
+      "language": "Java",
+      "languages": {
+        "Java": 2940
+      }
+    },
+    {
+      "name": "MoonWeight",
+      "created_at": "2018-02-03T23:14:34Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 5,
+      "forks_count": 2,
+      "pushed_at": "2022-12-02T04:42:03Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 2756
+      }
+    },
+    {
+      "name": "ProgressButton",
+      "created_at": "2022-10-16T19:19:25Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-10-18T19:04:36Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 26251
+      }
+    },
+    {
+      "name": "exoplayer-kotlin",
+      "created_at": "2022-10-16T19:44:15Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-10-17T07:01:32Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 122788
+      }
+    },
+    {
+      "name": "AndroidShareExample",
+      "created_at": "2017-07-18T09:03:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-09-29T18:01:17Z",
+      "language": "Java",
+      "languages": {
+        "Java": 2271
+      }
+    },
+    {
+      "name": "AppleTVApp",
+      "created_at": "2019-06-20T10:38:13Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 4,
+      "forks_count": 0,
+      "pushed_at": "2022-08-22T06:11:13Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 7576
+      }
+    },
+    {
+      "name": "tasarim-desenleri-turkce-kaynak",
+      "created_at": "2022-07-02T20:03:33Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-07-14T19:36:10Z",
+      "language": "HTML",
+      "languages": {
+        "Python": 65373,
+        "PHP": 555,
+        "Java": 64447,
+        "C#": 79576,
+        "Kotlin": 52139,
+        "TypeScript": 63651,
+        "HTML": 396854
+      }
+    },
+    {
+      "name": "Android-Image-Cropper",
+      "created_at": "2022-07-02T20:51:39Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-29T14:21:20Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 330731
+      }
+    },
+    {
+      "name": "Jetpack-Compose-Component-Box",
+      "created_at": "2022-06-28T14:44:09Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-28T20:14:13Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 32931
+      }
+    },
+    {
+      "name": "GifView",
+      "created_at": "2022-06-25T21:50:37Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-25T22:05:51Z",
+      "language": "Java",
+      "languages": {
+        "Java": 6939,
+        "Kotlin": 6838
+      }
+    },
+    {
+      "name": "Pokedex",
+      "created_at": "2022-06-25T17:02:11Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2022-06-25T17:46:14Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 81108
+      }
+    },
+    {
+      "name": "Sweet-Recycler-View",
+      "created_at": "2022-06-10T19:56:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-17T09:26:38Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 8670
+      }
+    },
+    {
+      "name": "Postman",
+      "created_at": "2022-06-16T18:59:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-16T19:19:49Z",
+      "language": "Kotlin",
+      "languages": {
+        "Java": 1126,
+        "Kotlin": 8565
+      }
+    },
+    {
+      "name": "BooksApp",
+      "created_at": "2022-06-15T19:53:00Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-06-16T18:45:49Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 58518
+      }
+    },
+    {
+      "name": "ExoMedia",
+      "created_at": "2022-06-14T19:31:31Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-14T20:02:51Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 324819
+      }
+    },
+    {
+      "name": "Weightly",
+      "created_at": "2022-06-12T20:50:06Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-12T21:04:51Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 67395
+      }
+    },
+    {
+      "name": "CryptoApplication",
+      "created_at": "2022-06-10T18:24:39Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-10T19:19:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 26621
+      }
+    },
+    {
+      "name": "SocialTextView",
+      "created_at": "2022-06-09T18:38:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-09T18:49:44Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 21268
+      }
+    },
+    {
+      "name": "bitcoin-market-android",
+      "created_at": "2022-06-09T18:07:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-09T18:33:03Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 119754
+      }
+    },
+    {
+      "name": "advanced-location",
+      "created_at": "2022-06-08T19:51:57Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-09T13:54:01Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 73947
+      }
+    },
+    {
+      "name": "waveformSeekBar",
+      "created_at": "2022-06-08T20:32:46Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-08T21:00:59Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 32921
+      }
+    },
+    {
+      "name": "image-zoom-view",
+      "created_at": "2022-06-08T20:16:00Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-08T20:27:02Z",
+      "language": "Java",
+      "languages": {
+        "Java": 27840
+      }
+    },
+    {
+      "name": "FoodOrderingApplication",
+      "created_at": "2022-06-07T19:14:23Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-07T19:37:59Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 129367
+      }
+    },
+    {
+      "name": "PasswordMeter",
+      "created_at": "2022-06-07T19:01:36Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-07T19:12:15Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 12427
+      }
+    },
+    {
+      "name": "Video-Calling-App",
+      "created_at": "2022-06-07T18:33:47Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-06-07T18:52:06Z",
+      "language": "Kotlin",
+      "languages": {
+        "Java": 4084,
+        "Kotlin": 68054
+      }
+    },
+    {
+      "name": "exoplayer-intro",
+      "created_at": "2022-06-05T20:21:38Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-05T20:35:36Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 16872
+      }
+    },
+    {
+      "name": "Android-Kotlin-Fundamentals-Projeler",
+      "created_at": "2022-06-04T14:48:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-04T14:53:55Z",
+      "language": "Kotlin",
+      "languages": {
+        "Java": 15583,
+        "Kotlin": 106797
+      }
+    },
+    {
+      "name": "ExoPlayerSample",
+      "created_at": "2022-06-04T14:29:43Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-04T14:40:03Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 5245
+      }
+    },
+    {
+      "name": "CvTanitim",
+      "created_at": "2022-06-04T14:01:21Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-04T14:13:50Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 27363
+      }
+    },
+    {
+      "name": "RoomDatabaseSample",
+      "created_at": "2022-06-04T13:35:28Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-04T13:44:22Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 27865
+      }
+    },
+    {
+      "name": "Weather-App-With-Compose",
+      "created_at": "2022-06-04T13:18:22Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-06-04T13:29:23Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 19286
+      }
+    },
+    {
+      "name": "mvvm-koin-rx-databing-boilerplate",
+      "created_at": "2022-05-24T19:55:38Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2022-05-26T18:14:42Z",
+      "language": "Kotlin",
+      "languages": {
+        "Java": 18266,
+        "Kotlin": 55309
+      }
+    },
+    {
+      "name": "turkcekaynaklar-com",
+      "created_at": "2018-07-16T09:41:31Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 3,
+      "forks_count": 1,
+      "pushed_at": "2022-04-30T18:44:18Z",
+      "language": "Shell",
+      "languages": {
+        "Shell": 869
+      }
+    },
+    {
+      "name": "awesome-smart-tv",
+      "created_at": "2020-07-27T08:17:47Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2022-01-18T08:53:19Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "K22-RetrofitKotlin",
+      "created_at": "2021-07-16T11:45:41Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2021-07-16T12:39:09Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 7679
+      }
+    },
+    {
+      "name": "android_roadmap",
+      "created_at": "2021-05-26T14:38:55Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2021-05-26T14:42:16Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "BuildVariantMapsDemo",
+      "created_at": "2021-03-04T12:34:11Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2021-03-04T12:46:50Z",
+      "language": "Kotlin",
+      "languages": {
+        "Kotlin": 5097
+      }
+    },
+    {
+      "name": "awesome-kotlin",
+      "created_at": "2020-09-08T09:14:12Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2020-09-09T15:18:39Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "flutter-rehberi",
+      "created_at": "2020-06-20T12:32:35Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 2,
+      "pushed_at": "2020-06-20T12:39:19Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "Kodluyoruz-iOS-Bootcamp",
+      "created_at": "2019-07-09T06:44:49Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 1,
+      "pushed_at": "2019-07-09T06:49:59Z",
+      "language": null,
+      "languages": {}
+    },
+    {
+      "name": "TurkiyeninIlleriApp",
+      "created_at": "2018-10-15T15:50:48Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2019-04-10T21:04:08Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 33978,
+        "Ruby": 357
+      }
+    },
+    {
+      "name": "SwiftProgrammingLanguage",
+      "created_at": "2019-02-14T12:30:26Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2019-02-21T19:16:45Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 1633
+      }
+    },
+    {
+      "name": "CurrencyConvertor",
+      "created_at": "2018-08-30T17:54:16Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 1,
+      "forks_count": 0,
+      "pushed_at": "2018-10-07T20:22:39Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 5829
+      }
+    },
+    {
+      "name": "AdMob",
+      "created_at": "2018-09-10T20:49:17Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 1,
+      "pushed_at": "2018-10-07T20:21:29Z",
+      "language": "Objective-C",
+      "languages": {
+        "Swift": 4755,
+        "Ruby": 284,
+        "Objective-C": 182268,
+        "Shell": 13091
+      }
+    },
+    {
+      "name": "ChatApp",
+      "created_at": "2018-08-07T21:31:29Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2018-10-07T20:20:23Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 11698,
+        "Ruby": 360
+      }
+    },
+    {
+      "name": "ZooApp",
+      "created_at": "2018-09-30T21:06:18Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2018-10-02T19:01:26Z",
+      "language": "Swift",
+      "languages": {
+        "Swift": 7163
+      }
+    },
+    {
+      "name": "QuizApp",
+      "created_at": "2018-08-29T15:14:00Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2018-08-29T16:30:33Z",
+      "language": "Objective-C",
+      "languages": {
+        "Swift": 7246,
+        "Objective-C": 24481
+      }
+    },
+    {
+      "name": "Swift-Ders-Kaynaklari",
+      "created_at": "2018-07-17T08:48:27Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": true,
+      "archived": false,
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "pushed_at": "2018-07-17T08:51:01Z",
+      "language": null,
+      "languages": {}
+    }
+  ]
+}

@@ -6,7 +6,12 @@ import {
   validateUsername,
 } from "../lib/hodja/github.mjs";
 import { handleApi, clearCache } from "../lib/hodja/api.mjs";
-import { renderCard, cardOptions, themes } from "../lib/hodja/cards.mjs";
+import {
+  renderCard,
+  cardOptions,
+  themes,
+  visibleLanguages,
+} from "../lib/hodja/cards.mjs";
 const user = {
   login: "test-user",
   name: 'A <script>alert("x")</script> & friend',
@@ -49,11 +54,25 @@ function mock(list = fixture) {
   return { calls, fetcher };
 }
 const params = (value) =>
-  parseOptions(new URLSearchParams({ username: "test-user", ...value }));
-const req = (query = "", path = "/api/profile", method = "GET") =>
-  new Request(`https://cards.example${path}?username=test-user&${query}`, {
-    method,
+  parseOptions(
+    new URLSearchParams({
+      username: "test-user",
+      metric: "repos",
+      archived: "false",
+      coverage: "all",
+      ...value,
+    }),
+  );
+const req = (query = "", path = "/api/profile", method = "GET") => {
+  const p = new URLSearchParams({
+    username: "test-user",
+    metric: "repos",
+    archived: "false",
+    coverage: "all",
   });
+  for (const [key, value] of new URLSearchParams(query)) p.set(key, value);
+  return new Request(`https://cards.example${path}?${p}`, { method });
+};
 beforeEach(clearCache);
 
 test("validates usernames and normalizes case before any upstream request", () => {
@@ -90,10 +109,10 @@ test("applies fork, archive and case-insensitive repository exclusions together"
     false,
   );
 });
-test("byte metric sums actual language bytes and discloses sample size", async () => {
+test("byte metric sums actual language bytes across every included repository", async () => {
   const { fetcher, calls } = mock();
   const p = await loadProfile(params({ metric: "bytes" }), { fetcher });
-  assert.equal(p.scope.languageSample, 2);
+  assert.equal(p.scope.languageRepoCount, 2);
   assert.deepEqual(
     p.languages.map((l) => [l.name, l.percent]),
     [
@@ -102,16 +121,16 @@ test("byte metric sums actual language bytes and discloses sample size", async (
       ["Java", 10],
     ],
   );
-  assert.equal(calls.length, 4);
+  assert.equal(calls.length, 6);
 });
-test("byte mode bounds language requests to twenty eligible nonempty repositories", async () => {
+test("byte mode scans beyond twenty repositories without sampling", async () => {
   const { fetcher, calls } = mock(
     Array.from({ length: 30 }, (_, i) => repo(`repo-${i}`, "Swift")),
   );
   const p = await loadProfile(params({ metric: "bytes" }), { fetcher });
-  assert.equal(p.scope.languageSample, 20);
+  assert.equal(p.scope.languageRepoCount, 30);
   assert.equal(p.stats.repos, 30);
-  assert.equal(calls.length, 22);
+  assert.equal(calls.length, 32);
 });
 test("follows repository pagination and marks a capped profile as partial", async () => {
   let pages = 0;
@@ -168,18 +187,18 @@ test("404, upstream outage and rate limiting keep their meaning with retry metad
 test("SVG generation escapes profile text and never rescales visible language percentages", async () => {
   const p = await loadProfile(params({}), mock());
   p.languages = [
-    { name: "A <unsafe>", percent: 30 },
-    { name: "B", percent: 20 },
-    { name: "C", percent: 50 },
+    { name: "A <unsafe>", value: 30, percent: 30 },
+    { name: "B", value: 20, percent: 20 },
+    { name: "C", value: 50, percent: 50 },
   ];
   for (const theme of Object.keys(themes))
     for (const type of ["stats", "languages", "overview"]) {
-      const svg = renderCard(p, { theme, type, count: 2 });
+      const svg = renderCard(p, { theme, type, count: 2, percentage: "all" });
       assert.ok(!svg.includes("<script>"));
       assert.match(svg, /role="img"/);
       if (type !== "stats") {
         assert.match(svg, /Other 50.0%/);
-        assert.match(svg, /30.0%/);
+        assert.match(svg, /30.00%/);
       }
     }
 });
@@ -188,7 +207,13 @@ test("handles empty language data and clamps invalid rendering options", async (
   assert.match(renderCard(p, { type: "languages" }), /No language data yet/);
   assert.deepEqual(
     cardOptions(new URLSearchParams("langs_count=NaN&theme=evil&type=evil")),
-    { theme: "midnight", locale: "en", count: 4, type: "stats" },
+    {
+      theme: "midnight",
+      locale: "en",
+      count: 4,
+      type: "stats",
+      percentage: "shown",
+    },
   );
 });
 test("serves SVG aliases, CORS, HEAD, and method errors with correct content types", async () => {
@@ -253,4 +278,110 @@ test("unavailable platform edge cache cannot turn a valid GitHub response into a
   assert.equal((await r.json()).stats.repos, 2);
   await handleApi(req("theme=paper", "/api/card"), { fetcher, edgeCache });
   assert.equal(calls.length, 2);
+});
+
+test("defaults match Readme Stats byte and visible-language conventions", () => {
+  const o = parseOptions(new URLSearchParams("username=test-user"));
+  assert.equal(o.metric, "bytes");
+  assert.equal(o.coverage, "legacy100");
+  assert.equal(o.archived, true);
+  assert.equal(o.forks, false);
+});
+test("visible-language denominator normalizes by real bytes while all-language mode preserves coverage", () => {
+  const p = {
+    languages: [
+      { name: "A", value: 300, percent: 30 },
+      { name: "B", value: 200, percent: 20 },
+      { name: "C", value: 500, percent: 50 },
+    ],
+  };
+  assert.deepEqual(
+    visibleLanguages(p, 2).map((l) => l.percent),
+    [60, 40],
+  );
+  assert.deepEqual(
+    visibleLanguages(p, 2, "all").map((l) => l.percent),
+    [30, 20],
+  );
+});
+test("legacy coverage uses declared first 100 repository set and does not narrow profile statistics", async () => {
+  const { collectSnapshot, aggregateSnapshot } = await import(
+    "../lib/hodja/github.mjs"
+  );
+  const snapshot = await collectSnapshot("test-user", mock(), {
+    languages: true,
+  });
+  snapshot.legacyRepositoryNames = ["one"];
+  const p = aggregateSnapshot(
+    snapshot,
+    params({ metric: "bytes", coverage: "legacy100" }),
+  );
+  assert.equal(p.stats.repos, 2);
+  assert.equal(p.scope.languageRepoCount, 1);
+  assert.deepEqual(
+    p.languages.map((l) => [l.name, l.value]),
+    [
+      ["Kotlin", 300],
+      ["Java", 100],
+    ],
+  );
+});
+test("authenticated full scans use paginated public GraphQL data and reject private repository nodes", async () => {
+  const { collectSnapshot } = await import("../lib/hodja/github.mjs");
+  let queryBody;
+  const node = (name, isPrivate = false) => ({
+    name,
+    isPrivate,
+    isFork: false,
+    isArchived: false,
+    stargazerCount: 2,
+    forkCount: 1,
+    primaryLanguage: { name: "Kotlin" },
+    languages: {
+      pageInfo: { hasNextPage: false },
+      edges: [{ node: { name: "Kotlin" }, size: 700 }],
+    },
+  });
+  const fetcher = async (url, init) => {
+    if (url.endsWith("/graphql")) {
+      queryBody = JSON.parse(init.body);
+      return Response.json({
+        data: {
+          repositoryOwner: {
+            legacy: { nodes: [{ name: "public" }] },
+            repositories: {
+              nodes: [node("public"), node("private", true)],
+              pageInfo: { hasNextPage: false },
+            },
+          },
+        },
+      });
+    }
+    return Response.json(user);
+  };
+  const s = await collectSnapshot("test-user", {
+    fetcher,
+    token: "test-secret",
+  });
+  assert.match(queryBody.query, /privacy:PUBLIC/);
+  assert.equal(s.repos.length, 1);
+  assert.equal(s.repos[0].languages.Kotlin, 700);
+  assert.ok(!JSON.stringify(s).includes("test-secret"));
+});
+test("scheduled public snapshots preserve original source time and avoid expensive live fallback", async () => {
+  const { collectSnapshot } = await import("../lib/hodja/github.mjs");
+  const s = await collectSnapshot("test-user", mock());
+  s.username = "halilozel1903";
+  for (const r of s.repos) r.owner.login = "halilozel1903";
+  s.generatedAt = new Date(Date.now() - 7200000).toISOString();
+  const p = await loadProfile(
+    parseOptions(new URLSearchParams("username=halilozel1903")),
+    {
+      snapshotFetcher: async () => Response.json(s),
+      fetcher: async () => assert.fail("Snapshot must avoid a live scan"),
+    },
+  );
+  assert.equal(p.scope.source, "github-snapshot");
+  assert.equal(p.updatedAt, s.generatedAt);
+  assert.equal(p.scope.sourceRefreshHours, 6);
 });

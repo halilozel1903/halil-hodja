@@ -5,6 +5,9 @@ export const dynamic = "force-dynamic";
 function respond(request: Request) {
   return handleApi(request, {
     token: (env as Record<string, unknown>).GITHUB_TOKEN as string | undefined,
+    snapshotRepository: (env as Record<string, unknown>).SNAPSHOT_REPOSITORY as
+      | string
+      | undefined,
     edgeCache: (caches as CacheStorage & { default: Cache }).default,
   });
 }
