@@ -237,3 +237,20 @@ test("a failed language fetch never becomes a successful partial dataset", async
   assert.equal(r.status, 502);
   assert.equal(r.headers.get("cache-control"), "no-store");
 });
+
+test("unavailable platform edge cache cannot turn a valid GitHub response into an error", async () => {
+  const { fetcher, calls } = mock();
+  const edgeCache = {
+    match: async () => {
+      throw new Error("Cache API unavailable");
+    },
+    put: async () => {
+      throw new Error("Cache API unavailable");
+    },
+  };
+  const r = await handleApi(req(), { fetcher, edgeCache });
+  assert.equal(r.status, 200);
+  assert.equal((await r.json()).stats.repos, 2);
+  await handleApi(req("theme=paper", "/api/card"), { fetcher, edgeCache });
+  assert.equal(calls.length, 2);
+});
