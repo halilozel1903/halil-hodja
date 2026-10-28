@@ -1,44 +1,39 @@
-# Data accuracy audit — 2026-10-28
+# Language accuracy audit — version 1.1, 2026-10-28
 
-This is a dated audit, not a promise that these numbers stay unchanged. The live application always fetches GitHub; these files are evidence and documentation fixtures only. They are never imported as runtime fallback data.
+The default method changed at the user's request: **actual code bytes**, with the same repository selection and displayed-language denominator as `github-readme-stats-fast`. The previous primary-language repository count and latest-20 byte sample are no longer the default. There is no 20-repository byte-sample mode in 1.1.
 
-## Independent checks
+## Exact comparison with the supplied card
 
-The application queried GitHub REST endpoints without a token. A separate authenticated GitHub CLI process fetched the profile and repositories, then independently aggregated the result. It did not call the application's aggregation module. Both methods matched:
+The reference source queries the first 100 owned, non-forked repositories, takes their largest 10 languages each, and sums language bytes. Its renderer selects the visible languages before computing the percentage denominator.
 
-| Measurement | App | Independent GitHub result |
+Sources: [reference fetcher](https://github.com/Pranesh-2005/github-readme-stats-fast/blob/main/src/fetchers/top-languages.js), [reference renderer](https://github.com/Pranesh-2005/github-readme-stats-fast/blob/main/src/cards/top-languages.js).
+
+An authenticated public-only GitHub collection on 2026-10-28 produced these independently reproducible results:
+
+| Language | Supplied card | Halil Hodja compatibility mode |
 | --- | ---: | ---: |
-| Public repositories scanned | 239 | 239 |
-| Included repositories | 198 | 198 |
-| Stars across included repositories | 1,174 | 1,174 |
-| Forks across included repositories | 299 | 299 |
-| Profile followers | 770 | 770 |
+| Swift | 34.12% | 34.12% |
+| Kotlin | 32.31% | 32.31% |
+| Java | 25.19% | 25.19% |
+| Objective-C | 8.37% | 8.37% |
 
-Filters: forked and archived repositories excluded; no named exclusions. Of the 198 included repositories, 195 had a primary language.
+Configuration: `metric=bytes&coverage=legacy100&percentage=shown&langs_count=4`. Percentages use the displayed four languages' total bytes. Repository names and every raw byte measurement are in [the timestamped public source](../data/halilozel1903.json).
 
-| Primary language | Repository count | Share of 195 |
-| --- | ---: | ---: |
-| Kotlin | 87 | 44.6154% |
-| Swift | 86 | 44.1026% |
-| Java | 16 | 8.2051% |
-| JavaScript | 2 | 1.0256% |
-| C# | 2 | 1.0256% |
-| Objective-C | 2 | 1.0256% |
+The full scan contained 240 public repositories; 199 were non-forked. Repository/star/fork/follower totals were 199 / 1,174 / 299 / 770 at collection time. Compatibility mode restricts language coverage, not the statistics card totals.
 
-The full primary-language distribution, including every language and its percentage, matched. The application dataset was captured at `2026-10-28T17:07:27.760Z`; the independent script passed at `2026-10-28T17:15:10.740Z`. See [the JSON record](verification.json).
+## Broader coverage
 
-The byte-mode dataset was captured at `2026-10-28T17:17:00.070Z`. A separate check at `2026-10-28T17:17:46.173Z` fetched language bytes individually for all 20 repositories declared in that dataset. Every language byte count and resulting percentage matched. See [sample names and bytes](verification-bytes.json). Sample membership is recorded because repositories can be pushed or their metadata can change between scans.
+With `coverage=all`, all 199 eligible repositories contributed their language bytes. On the same snapshot, the top-four normalized display was Swift 51.52%, Kotlin 38.03%, Shell 5.53%, Java 4.92%. This is a different scope, not a random or fabricated result: newer repositories outside the reference's first 100 change the distribution.
 
-## Reproduce
+The snapshot, preview SVGs, and verification records are dated measurements. They are not imported as hardcoded display percentages. Raw snapshots are collected by GitHub API and updated through Actions; every displayed percentage is recalculated from their byte totals.
+
+## Reproduce and detect differences
 
 ```sh
-# Authenticate GitHub CLI separately, then compare against the public app:
 npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site
-
-# Audit language bytes for the exact declared sample:
-npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site bytes
+npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site bytes all
 ```
 
-A changed count is not automatically an application bug: compare the dataset's `updatedAt` with the independent check time. Successful data is cached for one hour and GitHub responses are not atomic across requests. The verifier deliberately fails on differences rather than declaring an unchecked result accurate.
+The first command independently queries GitHub's reference first-100 language data and checks the actual SVG percentages. The second sums each eligible repository's REST language bytes independently. Both compare metadata totals and timestamps. A changed repository, new commit, delayed Linguist analysis, or delayed scheduled refresh can cause a genuine timestamp mismatch; the verifier fails on differences instead of approving unchecked data.
 
-The native automated test suite additionally checks filtering, all language denominators, byte summation, request bounds, pagination/caps, concurrent cache reuse, HTTP failures, escaping, and invalid input. Unit-test fixtures are synthetic inputs used only by tests, not production card data.
+Tests cover byte aggregation, compatibility scope, all-repository scans beyond 20 repositories, shown/all denominators, public-only GraphQL collection, snapshot provenance, cache aging, invalid inputs, SVG escaping, and error handling. Test fixtures are synthetic unit-test inputs only; they never feed production cards.

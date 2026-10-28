@@ -43,8 +43,14 @@ const words = {
     theme: "Choose a mood",
     count: "Languages to show",
     metric: "Measure languages by",
+    coverage: "Repository coverage",
+    full: "All eligible repositories",
+    legacy: "Readme Stats compatibility · first 100",
     repos: "Repositories",
-    bytes: "Code size · sample",
+    bytes: "Code size (bytes)",
+    percentage: "Calculate percentages within",
+    shown: "Displayed languages (like Readme Stats)",
+    all: "All detected languages",
     filters: "Fine-tune your data",
     forks: "Include forked repositories",
     archived: "Include archived repositories",
@@ -72,7 +78,7 @@ const words = {
     public: "Public, by design",
     publicSub: "Only public repositories. Your private work stays private.",
     precise: "A clear picture",
-    preciseSub: "Choose primary language by repository or a code-size sample.",
+    preciseSub: "Real code bytes, with explicit repository coverage.",
     yours: "Yours to build on",
     yoursSub: "MIT licensed. Self-host it, fork it, make it better.",
     scope: "How these numbers are calculated",
@@ -83,7 +89,8 @@ const words = {
     footer: "Made with care by Halil Özel.",
     footerSub: "For the people who build things.",
     visit: "View on GitHub",
-    refresh: "Data refreshes hourly",
+    refresh: "Live data cached up to 1 hour",
+    snapshotRefresh: "Full scan scheduled every 6 hours",
     loading: "Gathering public repositories and languages…",
     advancedNote: "Separate repository names with commas.",
     generated: "Updated",
@@ -108,8 +115,14 @@ const words = {
     theme: "Bir tema seç",
     count: "Gösterilecek dil sayısı",
     metric: "Dil dağılımını hesapla",
+    coverage: "Repo kapsamı",
+    full: "Tüm uygun repolar",
+    legacy: "Readme Stats uyumu · ilk 100",
     repos: "Repo sayısı",
-    bytes: "Kod boyutu · örneklem",
+    bytes: "Kod boyutu (bayt)",
+    percentage: "Yüzde hesabının kapsamı",
+    shown: "Gösterilen diller (Readme Stats gibi)",
+    all: "Tespit edilen tüm diller",
     filters: "Verilerine ince ayar yap",
     forks: "Fork repolarını dahil et",
     archived: "Arşivlenmiş repoları dahil et",
@@ -137,7 +150,7 @@ const words = {
     public: "Herkese açık veriler",
     publicSub: "Yalnızca açık repolar. Özel çalışmaların gizli kalır.",
     precise: "Anlamlı bir görünüm",
-    preciseSub: "Repo başına ana dili veya kod boyutu örneklemini seç.",
+    preciseSub: "Kapsamı açıkça belirtilen, gerçek kod baytları.",
     yours: "Geliştirmek için senin",
     yoursSub: "MIT lisanslı. Kendi sunucunda çalıştır, fork et, geliştir.",
     scope: "Bu sayılar nasıl hesaplanıyor?",
@@ -148,7 +161,8 @@ const words = {
     footer: "Halil Özel tarafından özenle yapıldı.",
     footerSub: "Bir şeyler üreten herkes için.",
     visit: "GitHub’da incele",
-    refresh: "Veriler saatlik yenilenir",
+    refresh: "Canlı veri en fazla 1 saat önbellekte",
+    snapshotRefresh: "Tam tarama 6 saatte bir planlanır",
     loading: "Açık repoların ve dillerin toplanıyor…",
     advancedNote: "Repo adlarını virgülle ayır.",
     generated: "Güncellendi",
@@ -165,9 +179,11 @@ export default function Home() {
   const [username, setUsername] = useState("halilozel1903");
   const [theme, setTheme] = useState<Theme>("midnight");
   const [count, setCount] = useState(4);
-  const [metric, setMetric] = useState("repos");
+  const [metric, setMetric] = useState("bytes");
+  const [percentage, setPercentage] = useState("shown");
+  const [coverage, setCoverage] = useState("legacy100");
   const [forks, setForks] = useState(false);
-  const [archived, setArchived] = useState(false);
+  const [archived, setArchived] = useState(true);
   const [exclude, setExclude] = useState("");
   const [view, setView] = useState("pair");
   const [format, setFormat] = useState("markdown");
@@ -200,6 +216,7 @@ export default function Home() {
       new URLSearchParams({
         username: username.trim(),
         metric,
+        coverage,
         forks: String(forks),
         archived: String(archived),
         exclude,
@@ -226,10 +243,13 @@ export default function Home() {
   useEffect(() => {
     const p = new URLSearchParams(window.location.search);
     const u = p.get("username") || "halilozel1903";
-    const m = p.get("metric") === "bytes" ? "bytes" : "repos";
+    const m = p.get("metric") === "repos" ? "repos" : "bytes";
     setUsername(u);
     setOrigin(window.location.origin);
     setMetric(m);
+    const c = p.get("coverage") === "all" ? "all" : "legacy100";
+    setCoverage(c);
+    setPercentage(p.get("percentage") === "all" ? "all" : "shown");
     if (
       ["pair", "stats", "languages", "overview"].includes(p.get("view") || "")
     )
@@ -240,14 +260,15 @@ export default function Home() {
     const n = Number(p.get("langs_count") || 4);
     setCount(Number.isFinite(n) ? Math.min(8, Math.max(2, Math.floor(n))) : 4);
     setForks(p.get("forks") === "true");
-    setArchived(p.get("archived") === "true");
+    setArchived(p.get("archived") !== "false");
     setExclude(p.get("exclude") || "");
     void generate(
       new URLSearchParams({
         username: u,
         metric: m,
+        coverage: c,
         forks: p.get("forks") || "false",
-        archived: p.get("archived") || "false",
+        archived: p.get("archived") || "true",
         exclude: p.get("exclude") || "",
       }),
     );
@@ -264,6 +285,7 @@ export default function Home() {
     profile &&
     (profile.user.login.toLowerCase() !== username.trim().toLowerCase() ||
       profile.scope.metric !== metric ||
+      profile.scope.coverage !== coverage ||
       profile.scope.forks !== forks ||
       profile.scope.archived !== archived ||
       [
@@ -278,16 +300,20 @@ export default function Home() {
         .join(",") !== profile.scope.exclude.join(","));
   const types = view === "pair" ? ["stats", "languages"] : [view];
   const svg = (type: string) =>
-    profile ? renderCard(profile, { theme, locale, type, count }) : "";
+    profile
+      ? renderCard(profile, { theme, locale, type, count, percentage })
+      : "";
   const baseParams = new URLSearchParams({
     username: profile?.user.login || username,
     theme,
     locale,
     langs_count: String(count),
+    percentage,
+    coverage: profile?.scope.coverage || coverage,
     metric: profile?.scope.metric || metric,
   });
   if (profile?.scope.forks) baseParams.set("forks", "true");
-  if (profile?.scope.archived) baseParams.set("archived", "true");
+  baseParams.set("archived", String(profile?.scope.archived ?? archived));
   if (profile?.scope.exclude.length)
     baseParams.set("exclude", profile.scope.exclude.join(","));
   const urls = types.map(
@@ -492,6 +518,34 @@ export default function Home() {
               </select>
               <ChevronDown size={14} />
             </div>
+            <label className="field-label" htmlFor="coverage">
+              {t.coverage}
+            </label>
+            <div className="select-wrap">
+              <select
+                id="coverage"
+                value={coverage}
+                onChange={(e) => setCoverage(e.target.value)}
+              >
+                <option value="all">{t.full}</option>
+                <option value="legacy100">{t.legacy}</option>
+              </select>
+              <ChevronDown size={14} />
+            </div>
+            <label className="field-label" htmlFor="percentage">
+              {t.percentage}
+            </label>
+            <div className="select-wrap">
+              <select
+                id="percentage"
+                value={percentage}
+                onChange={(e) => setPercentage(e.target.value)}
+              >
+                <option value="shown">{t.shown}</option>
+                <option value="all">{t.all}</option>
+              </select>
+              <ChevronDown size={14} />
+            </div>
             <div className="count-label">
               <label className="field-label" htmlFor="count">
                 {t.count}
@@ -656,7 +710,9 @@ export default function Home() {
                 ) : (
                   <>
                     <span className="green-dot" />
-                    {t.refresh}
+                    {profile?.scope.source === "github-snapshot"
+                      ? t.snapshotRefresh
+                      : t.refresh}
                   </>
                 )}
               </span>
@@ -777,24 +833,24 @@ export default function Home() {
               <p>
                 {profile.scope.metric === "bytes"
                   ? locale === "tr"
-                    ? `Dil dağılımı, en son güncellenen ${profile.scope.languageSample} uygun repodaki dil baytlarına göre hesaplandı (en fazla 20).`
-                    : `Language percentages use actual language bytes from the ${profile.scope.languageSample} most recently pushed eligible non-empty repositories (maximum 20).`
+                    ? `Dil dağılımı, seçilen kapsamdaki ${profile.scope.languageRepoCount} reponun gerçek dil baytlarıyla hesaplandı. ${profile.scope.coverage === "legacy100" ? "Readme Stats uyumu: GitHub’ın varsayılan sıralamasındaki ilk 100 forksuz repo; repo başına en büyük 10 dil." : "Tüm uygun repolar hesaplanır; örnekleme yapılmaz."}`
+                    : `Language totals use actual code bytes across ${profile.scope.languageRepoCount} repositories. ${profile.scope.coverage === "legacy100" ? "Readme Stats compatibility: first 100 non-fork repositories in GitHub default order, top 10 languages per repo." : "All eligible repositories are measured; no sampling is used."}`
                   : locale === "tr"
-                    ? `${profile.scope.languageSample} reponun ana dili sayıldı. Bu yüzdeler kod satırlarını veya kod boyutunu göstermez.`
-                    : `Languages count the primary language of ${profile.scope.languageSample} repositories. These percentages do not represent lines of code or code size.`}
+                    ? `${profile.scope.languageRepoCount} reponun ana dili sayıldı. Bu yüzdeler kod satırlarını veya kod boyutunu göstermez.`
+                    : `Languages count the primary language of ${profile.scope.languageRepoCount} repositories. These percentages do not represent lines of code or code size.`}
               </p>
               {profile.scope.metric === "bytes" && (
                 <p>
                   {locale === "tr"
-                    ? "Örneklenen repolar: "
-                    : "Sampled repositories: "}
+                    ? "Hesaplanan repolar: "
+                    : "Measured repositories: "}
                   {profile.scope.languageRepositories.join(", ")}
                 </p>
               )}
               <p>
                 {locale === "tr"
-                  ? "Fork ve arşivlenmiş repolar varsayılan olarak hariç tutulur. Commit, katkı ve özel repo sayıları hesaplanmaz. Kartta gösterilmeyen diller “Diğer” olarak kalır; yüzdeler yeniden ölçeklenmez."
-                  : "Forks and archived repos are excluded by default. Commits, contributions, and private repositories are not counted. Hidden languages remain “Other”; displayed percentages are never rescaled."}
+                  ? "Fork repoları varsayılan olarak hariç, arşivlenmiş repolar dahildir. Commit, katkı ve özel repo sayıları hesaplanmaz. Varsayılan yüzde, gösterilen dillerin bayt toplamı üzerinden hesaplanır; tüm dilleri payda olarak kullanmak için yukarıdaki seçeneği değiştir."
+                  : "Forks are excluded and archived repos are included by default. Commits, contributions and private repos are not counted. By default, percentages use the bytes of displayed languages as the denominator. Choose all detected languages above to include hidden languages in the denominator."}
               </p>
               {profile.scope.truncated && (
                 <p role="note">

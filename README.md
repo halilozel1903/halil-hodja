@@ -2,120 +2,125 @@
   <img src="public/favicon.svg" width="64" height="64" alt="Halil Hodja logo" />
   <h1>Halil Hodja</h1>
   <p><strong>Your GitHub, beautifully told.</strong></p>
-  <p>Thoughtful profile cards. Transparent numbers. Yours to build on.</p>
-  <p>
-    <a href="https://halil-hodja.halilozel1903.chatgpt.site">Open the card studio</a> ·
-    <a href="README.tr.md">Türkçe</a> ·
-    <a href="#api">API</a> ·
-    <a href="#self-hosting">Self-hosting</a> ·
-    <a href="CONTRIBUTING.md">Contribute</a>
-  </p>
-  <p>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-71915e" alt="MIT license" /></a>
-    <a href="https://github.com/halilozel1903/halil-hodja/actions/workflows/ci.yml"><img src="https://github.com/halilozel1903/halil-hodja/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
-    <img src="https://img.shields.io/badge/made_for-READMEs-42634b" alt="Made for READMEs" />
-  </p>
-  <img src="docs/preview-overview.svg" width="900" alt="Example Halil Hodja card using a real public GitHub snapshot, captured 2026-10-28. See Data accuracy for scope." />
+  <p>Real code bytes. Transparent coverage. Beautiful README cards.</p>
+  <p><a href="https://halil-hodja.halilozel1903.chatgpt.site">Card studio</a> · <a href="README.tr.md">Türkçe</a> · <a href="#api">API</a> · <a href="#self-hosting">Self-hosting</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
+  <p><a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-71915e" alt="MIT license" /></a> <a href="https://github.com/halilozel1903/halil-hodja/actions/workflows/ci.yml"><img src="https://github.com/halilozel1903/halil-hodja/actions/workflows/ci.yml/badge.svg" alt="CI" /></a></p>
+  <img src="docs/preview-overview.svg" width="900" alt="Real GitHub snapshot, 2026-10-28. Language bytes, Readme Stats compatibility coverage, displayed-language denominator." />
 </div>
 
-## Why Halil Hodja?
+## What it does
 
-A profile card should look good and tell the truth. Halil Hodja combines a visual card studio with a small GitHub data service: no sign-in, no fabricated contribution scores, and no mystery language percentages.
+A responsive English/Turkish studio for GitHub statistics and language cards, with six themes, statistics/language/combined layouts, Markdown and HTML snippets, image URLs, SVG downloads, and shareable configurations. Filters include forked repositories, archived repositories, and named exclusions. There are no invented contribution scores or fallback demo numbers.
 
-- **Six themes:** Midnight, Paper, Aurora, Ocean, Rose, Terminal.
-- **Four layouts:** a card pair, statistics, languages, or an all-in-one card.
-- **Live styling:** change themes, card language, and visible language count without fetching GitHub again.
-- **Useful controls:** include forks, include archived repos, or exclude named repositories.
-- **Two honest language metrics:** primary language per repository, or actual code bytes from an explicit sample.
-- **README-ready:** Markdown, HTML, image URLs, shareable studio links, SVG downloads.
-- **Built to share:** responsive English/Turkish UI, JSON API, cache reuse, meaningful errors, MIT license.
+## Language percentages — the important part
 
-The public demo is a best-effort service. It has no availability guarantee; self-host if your profile depends on it. This project does not claim a benchmark advantage over other stats services.
+**The default is code size in bytes, not repository count, file count, or lines of code.** GitHub classifies repository files into languages and reports their byte sizes. Halil Hodja sums those sizes.
 
-## Quick start
+The defaults reproduce the language method of [`github-readme-stats-fast`](https://github.com/Pranesh-2005/github-readme-stats-fast):
 
-Open the [studio](https://halil-hodja.halilozel1903.chatgpt.site), enter your GitHub username, choose a theme, and generate. Paste the snippet into your profile README.
+1. **Coverage: `legacy100`.** The first 100 public, owned, non-fork repositories in GitHub's default creation order; up to the largest 10 languages per repository. Archived repositories are included by default.
+2. **Weight: bytes.** Sum actual language bytes across that set.
+3. **Denominator: `shown`.** Sort by byte totals, select `langs_count` languages, then calculate each as a percentage of the **displayed languages' byte total**. Rounded percentages can add up to 99.99% or 100.01%.
+
+```text
+percentage = language_bytes / sum(bytes_of_displayed_languages) × 100
+```
+
+Two controls make the scope explicit:
+
+| Control | Default | Alternative |
+| --- | --- | --- |
+| Repository coverage | `coverage=legacy100` — Readme Stats compatibility | `coverage=all` — every eligible repository in the scan, with every reported language |
+| Percentage denominator | `percentage=shown` — displayed languages total approximately 100% | `percentage=all` — all detected languages; unshown languages remain “Other” |
+
+`metric=repos` is an optional primary-language repository count, clearly distinct from code size. It is **not** the default. No latest-20-repository sample is used in version 1.1.
+
+The current initial comparison matched the supplied Readme Stats card exactly: Swift **34.12%**, Kotlin **32.31%**, Java **25.19%**, Objective-C **8.37%**, for four displayed languages and compatibility coverage. These are dated verification results, not hardcoded runtime values. All-repository mode produces different percentages because it includes newer repositories outside the original first 100. See [the accuracy report](docs/ACCURACY.md).
+
+Reference implementations: [language fetcher](https://github.com/Pranesh-2005/github-readme-stats-fast/blob/main/src/fetchers/top-languages.js), [visible-language denominator](https://github.com/Pranesh-2005/github-readme-stats-fast/blob/main/src/cards/top-languages.js).
+
+## Add cards to your README
+
+Use the [studio](https://halil-hodja.halilozel1903.chatgpt.site) or paste:
 
 ```html
 <div align="center">
-  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;theme=midnight" alt="Halil Özel's GitHub statistics" />
-  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;langs_count=4" alt="Halil Özel's top primary languages by repository" />
+  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;theme=midnight" alt="GitHub statistics" />
+  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Top languages by code bytes — Readme Stats compatibility" />
 </div>
 ```
 
-Or one wide card:
+Replace the username. For one wide card use `type=overview`. SVGs work without JavaScript or external fonts. GitHub's image proxy may add its own cache delay.
 
-```md
-[![GitHub overview](https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=YOUR_USERNAME&type=overview&theme=paper)](https://github.com/YOUR_USERNAME)
-```
+## Other statistics
 
-Replace `YOUR_USERNAME`. For your own deployment, replace the origin too. SVGs work as GitHub README images without JavaScript or external fonts. GitHub's image proxy can add its own caching delay.
+- **Repositories:** included public repositories owned by the requested profile.
+- **Stars / forks earned:** sums across those included repositories.
+- **Followers:** profile-wide GitHub follower count.
 
-## Data accuracy
+The `coverage` option applies to **languages**, not the repository/star/fork totals. Repository exclusions and fork/archive filters apply to both. Private repositories, commits, PRs, contribution streaks, and repositories owned by other users/organizations are not counted. `1,174` versus `1.2k` in another card can simply be number formatting.
 
-**Every successful live card uses GitHub API data.** There are no fallback demo numbers, invented commits, contribution ranks, or random activity charts. If GitHub fails, the API returns an error; it never silently substitutes zeros. Checked-in preview SVGs are explicitly dated snapshots, not live counters.
+Scans are capped at 1,000 repositories and mark that limit with `scope.truncated`. Compatibility mode deliberately restricts language coverage to its first-100 set and reports `scope.complete=false`. Failed language requests fail the result; they never become a successful partial sum or zero fallback.
 
-| Number | Meaning |
-| --- | --- |
-| Repositories | Included public repositories owned by the requested user or organization |
-| Stars earned | Sum of `stargazers_count` on included repositories |
-| Forks earned | Sum of `forks_count` on included repositories |
-| Followers | GitHub's profile-wide follower count |
-| Languages: `repos` | Each repository with a non-null primary language counts once; denominator is all included repositories with a primary language |
-| Languages: `bytes` | Sum of GitHub language bytes in up to 20 most recently pushed eligible, non-empty repositories; denominator is all language bytes in that sample |
+## Data collection and freshness
 
-Forks and archived repositories are excluded by default. Exclusions apply to repository totals, stars, forks, and languages; follower count stays profile-wide. Private repositories, organization repositories the person does not own, commits, pull requests, and contribution streaks are not counted.
+A full code-size scan can exceed unauthenticated API limits. The official demo therefore uses **real, scheduled GitHub snapshots** for profiles in [`data/profiles.json`](data/profiles.json). [`Refresh public GitHub data`](.github/workflows/refresh-data.yml) runs every six hours using the short-lived GitHub Actions token. It queries only public repositories, records all language bytes, and commits the machine-readable data. No maintainer token is placed on the public web server.
 
-Showing fewer languages does **not** inflate the displayed percentages: remaining languages are shown as “Other.” Repository scanning is capped at the first 1,000 repositories in most-recently-pushed order; capped results are marked partial. The byte sample is bounded to limit GitHub API usage, and its sample size is available in JSON and on the language card. A failed byte request fails the result rather than returning incomplete success.
+The application reads the public snapshot from GitHub, applies the requested filters/coverage, and preserves its original `generatedAt` as `updatedAt`. Snapshots older than 24 hours are rejected, then a real live scan is attempted. The six-hour schedule is best effort; GitHub Actions may delay scheduled runs. A snapshot can therefore be older than six hours, and the timestamp remains visible in the studio. Snapshot age is never disguised as a fresh collection time.
 
-Successful datasets are cached for up to one hour. JSON includes `updatedAt`, `scope.scanned`, `scope.included`, `scope.languageSample`, `scope.languageRepositories`, and `scope.truncated`. Every successful API response includes `X-Hodja-Updated-At`. Styling variants reuse the same cached data. `Cache-Control` respects the remaining dataset lifetime. GitHub requests are not a transactional snapshot, so counts can change during a scan.
+For other profiles, or when `GITHUB_TOKEN` is configured, the server performs a live scan. An authenticated GraphQL scan gets 100 repositories with language bytes per page instead of issuing one language request for every repository. Without a token, full REST scans can exhaust the shared 60-request/hour IP quota. **No sampled or repository-count fallback is silently substituted.** Configure a token or scheduled snapshots for large profiles.
 
-To audit an instance independently against GitHub CLI:
+Live datasets are cached up to one hour. Snapshot reads can also be cached up to an hour, bounded by the snapshot's 24-hour acceptance window. Edge-cache failure falls back to bounded in-memory caching. Every successful API response includes `X-Hodja-Updated-At`; JSON also exposes source, coverage, repository names, filters, completeness, and refresh schedule.
+
+## Verify the numbers independently
+
+Requires a separately authenticated [GitHub CLI](https://cli.github.com/). Its credential goes only to GitHub, never to the app.
 
 ```sh
-# Requires GitHub CLI authenticated separately; its token is never sent to the app.
+# Default compatibility coverage and bytes; also checks actual SVG percentages:
 npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site
-# Or audit actual bytes for the named repository sample:
-npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site bytes
+
+# Full repository coverage, independently summing each repo's REST language bytes:
+npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site bytes all
 ```
 
-This independently compares repository/star/fork/follower totals, all primary-language counts, percentages, and scan scope. If current GitHub data differs from an hourly cached result, the command fails and prints both timestamps/counts for investigation. Read [the initial accuracy check](docs/ACCURACY.md).
-
-Sources: [GitHub repository endpoints](https://docs.github.com/en/rest/repos/repos), [repository language endpoint](https://docs.github.com/en/rest/repos/repos#list-repository-languages), [rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api).
+The verifier compares totals, raw language measurements, coverage, JSON percentages, and displayed SVG percentages. A timestamp/count difference fails the check for investigation. No fixed expected user statistics are used in production or unit tests. [Audit details](docs/ACCURACY.md).
 
 ## API
 
-All endpoints accept `GET` and `HEAD`. Responses support public read-only CORS. Use URL encoding for query values.
+`GET` and `HEAD`; public read-only CORS. Errors are not cached.
 
-| Endpoint | Returns |
+| Endpoint | Output |
 | --- | --- |
 | `/api/card?username=octocat&type=stats` | Statistics SVG |
 | `/api/card?username=octocat&type=languages` | Language SVG |
 | `/api/card?username=octocat&type=overview` | Combined SVG |
-| `/api/profile?username=octocat` | Profile, aggregates, languages, scope, timestamp as JSON |
-| `/api?username=octocat` | Short alias for statistics SVG |
-| `/api/top-langs/?username=octocat` | Short alias for language SVG |
-| `/api/health` | Service identity and health; does not query GitHub |
+| `/api/profile?username=octocat` | Profile, raw language totals, scope, timestamp as JSON |
+| `/api?username=octocat` | Statistics alias |
+| `/api/top-langs/?username=octocat` | Languages alias |
+| `/api/health` | Service status; does not query GitHub |
 
-| Parameter | Default | Values |
+| Parameter | Default | Accepted values |
 | --- | --- | --- |
 | `username` | Required | Valid GitHub username, max 39 characters |
 | `type` | `stats` | `stats`, `languages`, `overview` |
 | `theme` | `midnight` | `midnight`, `paper`, `aurora`, `ocean`, `rose`, `terminal` |
 | `locale` | `en` | `en`, `tr` |
-| `langs_count` | `4` | Integer, clamped to 2–8; invalid values use 4 |
-| `metric` | `repos` | `repos`, `bytes` |
-| `forks` | `false` | `true` includes forked repositories |
-| `archived` | `false` | `true` includes archived repositories |
-| `exclude` | Empty | Comma-separated case-insensitive repo names; max 30 unique names |
+| `langs_count` | `4` | Integer clamped to 2–8 |
+| `metric` | `bytes` | `bytes`, `repos` |
+| `coverage` | `legacy100` | `legacy100`, `all` |
+| `percentage` | `shown` | `shown`, `all` |
+| `forks` | `false` | `true` includes forks in full-coverage language mode and statistics; compatibility language coverage always excludes forks |
+| `archived` | `true` | `false` excludes archived repos |
+| `exclude` | Empty | Comma-separated case-insensitive names; max 30 |
 
-Unsupported theme/type/locale/metric values use their defaults. Parameters from other tools such as `count_private`, `hide`, `show_icons`, and `layout=compact` are not implemented. Use this project's documented parameters when migrating.
+`percentage` changes SVG presentation; JSON `languages[].percent` always uses **all detected languages within the selected repository coverage**. The raw byte values never change when the visible language count changes. API aliases and studio exports use the same renderer.
 
-Errors preserve HTTP meaning: `400` invalid username, `404` user/route not found, `429` GitHub quota exceeded with `Retry-After`, `502` GitHub unavailable, `405` unsupported method. Errors use `Cache-Control: no-store`. SVG endpoints return a readable error SVG with the error status; JSON endpoints return `{ "error": "..." }`.
+Unknown rendering options use defaults. Other projects' `count_private`, `hide`, `show_icons`, or `layout=compact` are not implemented. Errors: `400` invalid input, `404` unknown user/route, `429` quota with `Retry-After`, `502` upstream/incomplete scan, `405` unsupported method.
 
 ## Local development
 
-Requires **Node.js 22.13+** and npm. Node 22 LTS is used in CI.
+Node.js **22.13+** and npm; Node 22 is used in CI.
 
 ```sh
 git clone https://github.com/halilozel1903/halil-hodja.git
@@ -123,78 +128,54 @@ cd halil-hodja
 npm run install:ci
 npm run dev
 # http://127.0.0.1:5173
-```
-
-No account or token is required for public GitHub data. The installation helper preserves the checked-in lockfile and configures the platform runtime. It defaults to the portable profile outside the Sites managed environment.
-
-```sh
-npm test               # Aggregation, filters, cache, errors, escaping, API contracts
+npm test
 npm run typecheck
-npm run build          # Client + Cloudflare Worker output in dist/
-npm start              # Preview the production build locally using Wrangler
+npm run build
+npm start
 ```
 
 ## Self-hosting
 
-The supported public deployment target is **Cloudflare Workers with static assets**, built with React, Vinext, and Vite. No database is required. You do not need ChatGPT Sites to self-host.
+React + Vinext + Vite, deployed as a Cloudflare Worker with static assets. No database or ChatGPT Sites account is required.
 
 ```sh
 npm run build
-# Log in to your own Cloudflare account using the project's installed Wrangler:
 node node_modules/wrangler/bin/wrangler.js login
 npm run deploy:cloudflare
-```
-
-The deployment helper writes a standalone config alongside the build, sets the Worker name, and invokes Wrangler. To choose another name:
-
-```sh
+# Optional name or validation without publication:
 WORKER_NAME=my-github-cards npm run deploy:cloudflare
-```
-
-For a deployment validation without publishing:
-
-```sh
 npm run deploy:cloudflare -- --dry-run
 ```
 
-Set a token on the same Worker if needed:
+For live authenticated scans, add a dedicated public-data token as a runtime secret:
 
 ```sh
 node node_modules/wrangler/bin/wrangler.js secret put GITHUB_TOKEN --name halil-hodja
 ```
 
-For local development, create an ignored `.dev.vars` file with `GITHUB_TOKEN=...`. Use a dedicated token with access limited to public data. Never use a `NEXT_PUBLIC_` variable or put a token in a URL. All requests still use public `/users/:name/repos` endpoints and discard private repositories.
+For local development use an ignored `.dev.vars`. Never use `NEXT_PUBLIC_*`, URL parameters, browser storage, or committed files for a token.
 
-The checked-in `.openai/hosting.json` identifies the official Sites deployment. It is public metadata, not a credential, and is not used by the standalone deployment helper. If you deploy through Sites, create your **own** Site and replace `project_id` with its returned ID.
+To use your own scheduled snapshots: fork the repo, edit `data/profiles.json`, enable Actions, and run the refresh workflow. Configure runtime `SNAPSHOT_REPOSITORY=YOUR_OWNER/YOUR_REPO` (public repository, branch `main`). `npm run data:refresh` can also collect locally using `GITHUB_TOKEN` or your authenticated GitHub CLI; credentials stay in process memory. See [data/README.md](data/README.md).
 
-### GitHub rate limits
-
-Unauthenticated REST requests share a 60-request/hour limit per originating IP. Authenticated requests generally have a higher limit; consult [GitHub's current limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). A cold repository-mode scan uses one profile request plus 1–10 repository pages. Byte mode adds up to 20 language requests with concurrency four. Cache reuse reduces repeated calls for styling changes; it does not eliminate shared-service quota constraints. A deployment without a token is best suited to light use.
+`.openai/hosting.json` is public metadata for the official Sites deployment, not a credential. The standalone Cloudflare helper does not use its project identity. Create your own Site identity if publishing through Sites.
 
 ## Project map
 
 ```text
-app/page.tsx                   Bilingual studio and export controls
-app/globals.css                Responsive visual design
-app/api/[[...path]]/route.ts    Worker environment adapter
-lib/hodja/github.mjs           GitHub requests, validation, aggregation
-lib/hodja/cards.mjs            Platform-independent SVG renderer
-lib/hodja/api.mjs              API routing, cache, error responses
-scripts/verify-live.mjs        Independent GitHub CLI audit
-scripts/deploy-cloudflare.mjs  Standalone Worker deployment
-worker/index.ts               Vinext Worker entry
-scripts/vite/                 Hosting/build integrations
-tests/                        Native Node correctness tests
+app/                         Bilingual studio and API environment adapter
+lib/hodja/github.mjs         Public collection, coverage and byte aggregation
+lib/hodja/cards.mjs          Shared SVG renderer and percentage denominator
+lib/hodja/api.mjs            Cache, routing and error contracts
+data/                        Public, timestamped GitHub snapshots
+scripts/refresh-data.mjs     Authenticated snapshot collector
+scripts/verify-live.mjs      Independent GitHub CLI audit
+scripts/deploy-cloudflare.mjs Standalone deployment
+worker/ and scripts/vite/    Runtime/build integration
+tests/                       Native Node correctness tests
 ```
 
-## Privacy and security
+## Privacy, contributions and license
 
-No analytics or tracking scripts, cookies, database, or user accounts are added by the application. Public usernames and data are processed by the hosting service and GitHub; hosting providers may keep normal access logs. The studio loads DM Sans and Manrope from Google Fonts. Generated SVGs are self-contained and do not load remote fonts. GitHub/shields badges in this README are external images.
+No application analytics, tracking scripts, database, accounts, or cookies. GitHub and hosting providers process public usernames and may keep ordinary access logs. The studio uses Google Fonts; generated SVGs are self-contained. The public demo is best effort, without an availability guarantee. Independent of GitHub; not endorsed by GitHub.
 
-Tokens stay in runtime secrets, SVG text is escaped, and upstream hosts/paths are fixed. This project is independent of and not endorsed by GitHub. See [SECURITY.md](SECURITY.md).
-
-## Contributing and license
-
-Bug reports, themes, accessibility improvements, and careful data corrections are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md). Licensed under [MIT](LICENSE), with the vendored Sites integration license retained in `scripts/vite/`.
-
-Made with care by [Halil Özel](https://github.com/halilozel1903), for the people who build things.
+[Contribute](CONTRIBUTING.md) · [Security](SECURITY.md) · [MIT license](LICENSE). The vendored Sites integration retains its upstream license. Made by [Halil Özel](https://github.com/halilozel1903).

@@ -1,39 +1,18 @@
 {
-  "checkedAt": "2026-10-28T17:17:46.173Z",
-  "dataUpdatedAt": "2026-10-28T17:17:00.070Z",
-  "sampledRepositories": [
-    "halilozel1903",
-    "SunriseKit",
-    "RadioBrowserKit",
-    "picsum-kotlin",
-    "RangeSlider",
-    "DovizApp",
-    "FlatListApp",
-    "TicTacToeGame",
-    "StonePaperScissorsGame",
-    "RollDiceGame",
-    "SwipeActions",
-    "spaceflight-news-kotlin",
-    "coingecko-kotlin",
-    "compose-expandable-text",
-    "QuakeKit",
-    "compose-number-picker",
-    "compose-tag-input",
-    "OpenTriviaKit",
-    "freetogame-kotlin",
-    "CarouselKit"
-  ],
+  "version": "1.1.0",
+  "dataUpdatedAt": "2026-10-28T17:32:40.298Z",
+  "coverage": "legacy100",
   "languageBytes": {
-    "Swift": 878994,
-    "Kotlin": 554202,
-    "Shell": 141804,
+    "Swift": 860503,
+    "Kotlin": 814747,
+    "Java": 635308,
+    "Objective-C": 211185,
+    "C#": 39288,
+    "Shell": 16071,
     "JavaScript": 13016,
-    "Java": 11027,
-    "Objective-C": 4436,
-    "Starlark": 1922,
-    "Ruby": 791,
-    "HTML": 638
+    "Python": 3631,
+    "Ruby": 3009,
+    "Starlark": 1922
   },
-  "matched": true,
-  "method": "Each named public repository was queried independently through authenticated GitHub CLI; every language total and percentage matched."
+  "denominator": "displayed-language bytes"
 }

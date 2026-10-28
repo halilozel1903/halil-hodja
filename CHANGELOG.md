@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.0 — 2026-10-28
+
+- Use real code bytes by default with exact Readme Stats first-100 compatibility coverage.
+- Normalize visible languages by their byte total by default; offer all-language denominator and full-repository coverage explicitly.
+- Remove the 20-repository byte sample; retain primary-language counts as an optional metric.
+- Add public-only, paginated GraphQL collection and scheduled, timestamped GitHub Actions snapshots.
+- Update English/Turkish documentation, examples, previews, independent SVG verification, and correctness tests.
+
 ## 1.0.0 — 2026-10-28
 
 - Live GitHub card studio with six themes, English and Turkish UI.

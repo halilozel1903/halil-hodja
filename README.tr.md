@@ -2,55 +2,77 @@
   <img src="public/favicon.svg" width="64" alt="Halil Hodja" />
   <h1>Halil Hodja</h1>
   <p><strong>GitHub hikâyen, güzel bir anlatımla.</strong></p>
-  <p>Şık profil kartları. Şeffaf veriler. Herkes için açık kaynak.</p>
-  <a href="https://halil-hodja.halilozel1903.chatgpt.site/?locale=tr">Kart stüdyosunu aç</a> · <a href="README.md">English / tam API rehberi</a>
+  <p>Gerçek kod boyutu. Açık hesaplama yöntemi. Şık README kartları.</p>
+  <a href="https://halil-hodja.halilozel1903.chatgpt.site/?locale=tr">Kart stüdyosu</a> · <a href="README.md">English / tam API rehberi</a>
 </div>
 
-![Gerçek verilerle hazırlanmış örnek; 28 Ekim 2026 tarihli anlık görüntü](docs/preview-overview.svg)
+![Gerçek GitHub verisi, 28 Ekim 2026 tarihli anlık görüntü; kod boyutu ve Readme Stats uyumlu kapsam](docs/preview-overview.svg)
 
-## Neler yapar?
+## Dil yüzdeleri nasıl hesaplanıyor?
 
-- GitHub istatistiklerini ve dil dağılımını kişiselleştirilebilir SVG kartlarına dönüştürür.
-- Midnight, Paper, Aurora, Ocean, Rose ve Terminal temalarını sunar.
-- Kart çifti, istatistik, dil ve birleşik kart düzenleri içerir.
-- Markdown, HTML ve görsel bağlantısı üretir; SVG indirmeni sağlar.
-- Fork/arşiv filtresi, repo hariç tutma ve 2–8 dil gösterme seçenekleri vardır.
-- Türkçe ve İngilizce çalışır. MIT lisanslıdır; kendi sunucunda yayımlayabilirsin.
+**Varsayılan artık repo adedi değil, GitHub’ın dosyalar için bildirdiği dil bazındaki kod boyutudur (bayt).** Dosya sayısı veya satır sayısı değildir.
 
-## Veriler gerçek mi?
+[`github-readme-stats-fast`](https://github.com/Pranesh-2005/github-readme-stats-fast) ile aynı varsayılan yöntem kullanılır:
 
-**Evet. Başarılı canlı kartların tamamı doğrudan GitHub API’den gelen verilerle hesaplanır.** Sahte sayı, rastgele aktivite veya uydurma katkı puanı yoktur. GitHub hata verirse hata gösterilir; veri yerine sıfır yazılmaz. Repodaki önizleme SVG’leri tarihli anlık görüntülerdir.
+1. GitHub’ın varsayılan oluşturulma sırasındaki ilk **100 açık, kullanıcıya ait, forksuz repo** alınır. Arşivlenmiş repolar varsayılan olarak dahildir.
+2. Repo başına en büyük 10 dilin gerçek baytları toplanır.
+3. En büyük `langs_count` dil seçilir. Her dilin yüzdesi **gösterilen dillerin toplam baytına** bölünerek hesaplanır.
 
-- **Repo:** filtrelere uyan ve kullanıcıya ait herkese açık repoların sayısı.
-- **Yıldız ve fork:** bu repolardaki sayıların toplamı.
-- **Takipçi:** GitHub profilindeki genel takipçi sayısı.
-- **Repo sayısına göre diller:** ana dili belli olan her repo bir kez sayılır. Kod satırı ya da kod boyutu ölçümü değildir.
-- **Kod boyutuna göre diller:** en son kod gönderilen, boş olmayan en fazla 20 uygun reponun gerçek dil baytları toplanır. Tüm hesabın kod boyutu gibi sunulmaz; örneklem sayısı belirtilir.
-
-Varsayılan olarak fork ve arşivlenmiş repolar hariçtir. Özel repolar, commit sayısı, katkı serisi ve kullanıcının sahibi olmadığı organizasyon repoları dahil değildir. İlk 1.000 repo taranır; sınır aşıldıysa sonuç kısmi olarak işaretlenir. Görünmeyen dillerin oranı “Diğer” olarak kalır; gösterilen yüzdeler şişirilmez.
-
-Veriler bir saate kadar önbellekte tutulur. JSON yanıtındaki `updatedAt` ve `scope` alanları zamanı/kapsamı gösterir. GitHub’ın görsel önbelleği ayrıca gecikme ekleyebilir. API taraması tek bir atomik anlık görüntü değildir; tarama sırasında GitHub sayıları değişebilir.
-
-Bağımsız kontrol için GitHub CLI ile giriş yapıp çalıştır:
-
-```sh
-npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site
+```text
+yüzde = dilin bayt toplamı / gösterilen dillerin bayt toplamı × 100
 ```
 
-Bu kontrol repo, yıldız, fork, takipçi, dil adetleri, yüzdeler ve tarama kapsamını ayrı GitHub sorgularıyla karşılaştırır. Güncel GitHub verisi saatlik önbellekten farklıysa iki sonucu gösterip başarısız çıkar. İlk karşılaştırma: [doğruluk raporu](docs/ACCURACY.md).
+Bu yöntemle kontrol sırasında ekran görüntüsündeki sonuçlar birebir elde edildi: **Swift %34,12 · Kotlin %32,31 · Java %25,19 · Objective-C %8,37**. Bunlar tarihli doğrulama sonuçlarıdır; uygulamada sabit yazılmış sayılar değildir.
+
+İki ayarı değiştirebilirsin:
+
+| Ayar | Varsayılan | Alternatif |
+| --- | --- | --- |
+| Repo kapsamı | `coverage=legacy100`: Readme Stats uyumu, ilk 100 forksuz repo | `coverage=all`: taramadaki tüm uygun repolar ve tüm diller |
+| Yüzde kapsamı | `percentage=shown`: gösterilen diller yaklaşık %100 eder | `percentage=all`: tüm diller paydada kalır; gizlenenler “Diğer” olur |
+
+“Tüm uygun repolar” daha yeni repoları da içerir; oranlarının ilk 100 hesabından farklı olması normaldir. `metric=repos` ile ana dil başına repo sayısı isteğe bağlı olarak seçilebilir. **1.1 sürümünde son 20 repo örneklemesi kullanılmaz.**
+
+## İstatistiklerin kapsamı
+
+Repo sayısı, yıldız ve fork toplamları filtrelere uyan tüm açık, kullanıcıya ait repolardan hesaplanır. `coverage` yalnızca dil hesabını sınırlar. Takipçi sayısı profil genelindedir. Özel repolar, commit, PR ve katkı serisi hesaplanmaz. Örneğin **1.174** yıldızın başka kartta **1.2k** görünmesi yuvarlama olabilir.
+
+Tarama sınırı 1.000 repodur; sınır aşılırsa `scope.truncated` belirtilir. İlk 100 uyum modu dil kapsamının sınırlı olduğunu `scope.complete=false` ile açıklar. GitHub hata verirse hata gösterilir; sahte veri, sıfır veya sessiz bir örneklem devreye girmez.
+
+## Veri kaynağı ve güncellik
+
+Büyük profillerin tüm dil baytlarını her ziyaretçide sorgulamak API kotasını tüketir. Resmi demo, [`data/profiles.json`](data/profiles.json) listesindeki profiller için **gerçek GitHub verilerinden üretilen zaman damgalı kayıtlar** kullanır. GitHub Actions iş akışı 6 saatte bir planlanır; yalnızca açık repoları okur ve geçici Actions token’ıyla çalışır. Kalıcı kişisel token web sunucusuna konmaz.
+
+Kaynağın `generatedAt` zamanı aynen `updatedAt` olarak gösterilir; eski veri yeni toplanmış gibi sunulmaz. Actions zamanlaması gecikebilir. 24 saatten eski kayıt kabul edilmez, canlı sorgu denenir. Canlı sonuçlar ve kaynak okumaları en fazla bir saat önbellekte tutulabilir. Kaynak zamanı ve kapsam stüdyoda/JSON yanıtında görülebilir.
+
+Diğer profiller için canlı sorgu yapılır. Sunucuda `GITHUB_TOKEN` varsa sayfalı GraphQL sorgusu tüm dil baytlarını verimli toplar. Token olmadan ortak IP kotası büyük hesaplarda dolabilir; tam tarama için token veya kendi planlı veri kaydını kullan. Demo kesintisiz hizmet garantisi vermez.
+
+## Bağımsız doğrulama
+
+GitHub CLI ile ayrı giriş yapıp çalıştır. CLI token’ı uygulamaya gönderilmez.
+
+```sh
+# Varsayılan uyum hesabı; SVG üzerindeki yüzdeler dahil kontrol edilir:
+npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site
+
+# Tüm repoların dil baytlarını bağımsız REST sorgularıyla karşılaştır:
+npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.site bytes all
+```
+
+Sayım, bayt toplamı veya gösterilen yüzde uyuşmazsa kontrol başarısız olur. [Doğruluk raporu](docs/ACCURACY.md) · [Hesaplanan açık kaynak veri](data/halilozel1903.json).
 
 ## README’ye ekle
 
 ```html
 <div align="center">
   <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;theme=midnight&amp;locale=tr" alt="GitHub istatistikleri" />
-  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;locale=tr&amp;langs_count=4" alt="Repo ana diline göre dil dağılımı" />
+  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;locale=tr&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Kod boyutuna göre diller — Readme Stats uyumu" />
 </div>
 ```
 
-Kendi kullanıcı adını yaz. Stüdyodan istediğin temayı seçerek aynı kodu otomatik üretebilirsin.
+Kendi kullanıcı adını yaz. Stüdyoda altı tema, Türkçe/İngilizce, farklı düzenler, Markdown/HTML kodu, SVG indirme ve paylaşılabilir ayarlar bulunur.
 
-## Kurulum
+## Kurulum ve yayınlama
 
 Node.js 22.13+ ve npm gerekir.
 
@@ -59,48 +81,37 @@ git clone https://github.com/halilozel1903/halil-hodja.git
 cd halil-hodja
 npm run install:ci
 npm run dev
-# http://127.0.0.1:5173
-```
-
-```sh
 npm test
 npm run typecheck
 npm run build
 npm start
 ```
 
-## Kendi hesabında yayımla
-
-Cloudflare Workers ve statik dosyalar kullanılır. Veritabanı veya ChatGPT Sites hesabı gerekmez.
+Cloudflare Workers üzerinde bağımsız yayın; veritabanı veya ChatGPT Sites hesabı gerekmez:
 
 ```sh
-npm run build
 node node_modules/wrangler/bin/wrangler.js login
 npm run deploy:cloudflare
+# Yayımlamadan paket kontrolü:
+npm run deploy:cloudflare -- --dry-run
 ```
 
-Başka Worker adı için `WORKER_NAME=benim-kartlarim npm run deploy:cloudflare` kullan. Yayımlamadan kontrol etmek için `npm run deploy:cloudflare -- --dry-run` çalıştır.
-
-Yoğun kullanımda sunucu tarafında, yalnızca herkese açık veriler için yetkili özel bir GitHub token’ı tanımlayabilirsin:
+Canlı tam taramalar için yalnızca açık verilere erişen özel bir token tanımlayabilirsin:
 
 ```sh
 node node_modules/wrangler/bin/wrangler.js secret put GITHUB_TOKEN --name halil-hodja
 ```
 
-Yerel geliştirmede git tarafından yok sayılan `.dev.vars` dosyasına `GITHUB_TOKEN=...` yazılır. Token’ı URL’ye, tarayıcı koduna veya `NEXT_PUBLIC_` değişkenine koyma. Token olmadan GitHub’ın IP başına saatlik ortak kotası geçerlidir. Canlı demo hafif kullanım içindir; kesintisiz hizmet garantisi yoktur.
+Yerelde token git tarafından yok sayılan `.dev.vars` dosyasına konur; URL’ye, tarayıcıya, `NEXT_PUBLIC_` değişkenine veya repoya yazılmaz.
 
-`.openai/hosting.json` resmi Sites yayınının herkese açık kimliğidir; bir parola değildir. Standart Cloudflare yayını bu kimliği kullanmaz. Sites üzerinden kendi kopyanı yayımlayacaksan kendi Site kimliğinle değiştir.
+Planlı veri toplamak için repoyu fork et, `data/profiles.json` listesini düzenle, Actions’ı etkinleştir ve veri yenileme iş akışını çalıştır. Sunucuda `SNAPSHOT_REPOSITORY=KULLANICI/REPO` ayarla; repo açık, dal `main` olmalı. Yerel toplama: `npm run data:refresh`. [Veri rehberi](data/README.md).
 
-## API
+`.openai/hosting.json` resmi Sites yayınının açık kimliğidir; parola değildir. Bağımsız Cloudflare yayını bunu kullanmaz.
 
-`/api/card?username=AD&type=stats|languages|overview` SVG; `/api/profile?username=AD` JSON döndürür. `/api?username=AD` ve `/api/top-langs/?username=AD` kısa bağlantıları da vardır.
+## API ve lisans
 
-Parametreler: `theme`, `locale=en|tr`, `langs_count=2..8`, `metric=repos|bytes`, `forks=true|false`, `archived=true|false`, `exclude=repo-bir,repo-iki`.
+`/api/card?username=AD&type=stats|languages|overview` SVG; `/api/profile?username=AD` JSON verir. API’de `languages[].percent`, seçilen repo kapsamındaki **tüm dilleri** payda olarak kullanır; SVG’deki yüzde `percentage` ayarına göre hesaplanır. Ham baytlar görünür dil sayısından etkilenmez.
 
-Diğer araçlardaki `count_private`, `hide` veya `show_icons` gibi parametreler uygulanmaz. Tam davranışlar ve hata kodları [İngilizce API tablosunda](README.md#api).
+Tam parametreler: [API tablosu](README.md#api). Analitik/takip betiği veya kullanıcı hesabı yoktur. Barındırma/GitHub erişim kaydı tutabilir; stüdyo Google Fonts kullanır, SVG’ler dış font yüklemez.
 
-## Katkı ve gizlilik
-
-[Katkı rehberine](CONTRIBUTING.md) göz at. Uygulama analitik/takip betiği, kullanıcı hesabı veya veritabanı eklemez. GitHub ve barındırma servisi açık kullanıcı adlarını işler; normal erişim kayıtları tutabilir. Stüdyo Google Fonts kullanır; SVG kartlar dış font çağrısı yapmaz. [Güvenlik politikası](SECURITY.md) · [MIT lisansı](LICENSE).
-
-[Halil Özel](https://github.com/halilozel1903) tarafından, bir şeyler üreten herkes için.
+[Katkı rehberi](CONTRIBUTING.md) · [Güvenlik](SECURITY.md) · [MIT lisansı](LICENSE). [Halil Özel](https://github.com/halilozel1903) tarafından geliştirildi.
