@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-28T17:15:39.272Z",
+  "dataUpdatedAt": "2026-10-28T17:07:27.760Z",
+  "username": "halilozel1903",
+  "stats": {
+    "repos": 198,
+    "stars": 1174,
+    "forks": 299,
+    "followers": 770
+  },
+  "scope": {
+    "metric": "repos",
+    "scanned": 239,
+    "included": 198,
+    "languageSample": 195,
+    "truncated": false,
+    "forks": false,
+    "archived": false,
+    "exclude": [],
+    "publicOnly": true
+  },
+  "languages": [
+    {
+      "name": "Kotlin",
+      "value": 87,
+      "percent": 44.61538461538462
+    },
+    {
+      "name": "Swift",
+      "value": 86,
+      "percent": 44.1025641025641
+    },
+    {
+      "name": "Java",
+      "value": 16,
+      "percent": 8.205128205128204
+    },
+    {
+      "name": "C#",
+      "value": 2,
+      "percent": 1.0256410256410255
+    },
+    {
+      "name": "JavaScript",
+      "value": 2,
+      "percent": 1.0256410256410255
+    },
+    {
+      "name": "Objective-C",
+      "value": 2,
+      "percent": 1.0256410256410255
+    }
+  ],
+  "method": "Independently compared with authenticated GitHub CLI responses; no shared application aggregation code used for the independent totals."
+}

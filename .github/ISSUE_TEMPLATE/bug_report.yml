@@ -1,0 +1,23 @@
+name: Bug report
+description: Report incorrect data or a broken card.
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Card or studio URL
+      description: Public URLs only. Remove any secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+      description: For data issues, include the filters, metric, and data timestamp.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
