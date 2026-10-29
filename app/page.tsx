@@ -21,7 +21,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import Github from "@/components/github-icon";
-import { renderCard, themes, cardDimensions } from "@/lib/hodja/cards.mjs";
+import { renderCard, themes, cardDimensions, CARD_REVISION } from "@/lib/hodja/cards.mjs";
 
 type Locale = "en" | "tr";
 type Theme = keyof typeof themes;
@@ -333,6 +333,7 @@ export default function Home() {
       : "";
   const baseParams = new URLSearchParams({
     username: profile?.user.login || username,
+    v: CARD_REVISION,
     theme,
     locale,
     langs_count: String(count),
@@ -351,7 +352,7 @@ export default function Home() {
   );
   const snippet =
     format === "html"
-      ? `<div align="center">\n${urls.map((url, i) => `  <img src="${url.replaceAll("&", "&amp;")}" width="${cardDimensions(types[i], style).width}" alt="${types[i] === "languages" ? "Top languages" : "GitHub statistics"} — ${profile?.user.login || username}" />`).join("\n")}\n</div>`
+      ? `<div align="center">\n${urls.map((url, i) => `  <img src="${url.replaceAll("&", "&amp;")}" ${view === "pair" ? 'height="280"' : `width="${cardDimensions(types[i], style).width}"`} alt="${types[i] === "languages" ? "Top languages" : "GitHub statistics"} — ${profile?.user.login || username}" />`).join(view === "pair" ? "\n  &emsp;&emsp;\n" : "\n")}\n</div>`
       : format === "url"
         ? urls.join("\n")
         : urls
