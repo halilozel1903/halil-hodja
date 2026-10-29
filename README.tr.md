@@ -85,8 +85,9 @@ Sayım, bayt toplamı veya gösterilen yüzde uyuşmazsa kontrol başarısız ol
 
 ```html
 <div align="center">
-  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;theme=midnight&amp;locale=tr" alt="GitHub istatistikleri" />
-  <img width="500" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;locale=tr&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Kod boyutuna göre diller — Readme Stats uyumu" />
+  <img height="280" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;v=spacing-2&amp;theme=midnight&amp;locale=tr" alt="GitHub istatistikleri" />
+  &emsp;&emsp;
+  <img height="280" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;v=spacing-2&amp;theme=midnight&amp;locale=tr&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Kod boyutuna göre diller — Readme Stats uyumu" />
 </div>
 ```
 

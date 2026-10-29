@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Add more space between activity values and captions, including the streak ring label.
+- Export HTML card pairs at equal heights with an explicit gap; add a rendering revision to new image URLs to avoid older GitHub image caches.
+
 ## 1.2.0 — 2026-10-29
 
 - Redesign the studio with a dark palette, live hero card, seven themes and responsive controls.
