@@ -213,6 +213,8 @@ test("handles empty language data and clamps invalid rendering options", async (
       count: 4,
       type: "stats",
       percentage: "shown",
+      style: "spotlight",
+      chart: "donut",
     },
   );
 });
@@ -344,7 +346,8 @@ test("authenticated full scans use paginated public GraphQL data and reject priv
   });
   const fetcher = async (url, init) => {
     if (url.endsWith("/graphql")) {
-      queryBody = JSON.parse(init.body);
+      if (JSON.parse(init.body).query.includes("PublicCode"))
+        queryBody = JSON.parse(init.body);
       return Response.json({
         data: {
           repositoryOwner: {
