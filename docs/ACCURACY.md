@@ -37,3 +37,13 @@ npm run verify:live -- halilozel1903 https://halil-hodja.halilozel1903.chatgpt.s
 The first command independently queries GitHub's reference first-100 language data and checks the actual SVG percentages. The second sums each eligible repository's REST language bytes independently. Both compare metadata totals and timestamps. A changed repository, new commit, delayed Linguist analysis, or delayed scheduled refresh can cause a genuine timestamp mismatch; the verifier fails on differences instead of approving unchecked data.
 
 Tests cover byte aggregation, compatibility scope, all-repository scans beyond 20 repositories, shown/all denominators, public-only GraphQL collection, snapshot provenance, cache aging, invalid inputs, SVG escaping, and error handling. Test fixtures are synthetic unit-test inputs only; they never feed production cards.
+
+## Public activity — version 1.2, 2026-10-29
+
+The timestamped [activity record](verification-activity.json) contains both public commit-only measurements and anonymous public profile calendar measurements. At collection on 2026-10-29 the profile calendar showed **2,769 visible contributions and a 34-day current contribution streak**. The previous 2-day value counted only public commit dates; it did not describe the profile contribution graph. The card now labels and displays **Contribution streak** from the public calendar.
+
+Public commits are summed from public repository nodes in non-overlapping seven-day windows; private nodes are discarded. Caps or incomplete connections make public commit values unavailable. The contribution calendar is fetched anonymously and can include PRs, reviews and anonymized private counts that the owner has made public. It never exposes private repository names or contents. An incomplete calendar makes the contribution streak unavailable rather than falling back to a differently defined commit streak. Current streaks allow today/yesterday grace in UTC; best streaks cover 365 dates. GitHub's displayed calendar total includes its visible week-padding dates, while streak calculations use the last 365 dates.
+
+PR counts are all-time public search results. These values are collected data, not hardcoded card values, and change with activity and refreshes. See [GitHub contribution rules](https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference).
+
+The reference tool's A+/A labels use a [custom ranking formula](https://github.com/Pranesh-2005/github-readme-stats-fast/blob/main/src/calculateRank.js). Halil Hodja uses its ring for an observed contribution streak without claiming an official GitHub skill grade.

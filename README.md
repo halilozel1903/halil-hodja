@@ -10,7 +10,7 @@
 
 ## What it does
 
-A responsive English/Turkish studio for GitHub statistics and language cards, with six themes, statistics/language/combined layouts, Markdown and HTML snippets, image URLs, SVG downloads, and shareable configurations. Filters include forked repositories, archived repositories, and named exclusions. There are no invented contribution scores or fallback demo numbers.
+A responsive English/Turkish studio for GitHub statistics and language cards, with seven themes, Spotlight/Classic styles, donut/bar language charts, statistics/language/combined layouts, Markdown and HTML snippets, image URLs, SVG downloads, and shareable configurations. Filters include forked repositories, archived repositories, and named exclusions. There are no invented contribution scores or fallback demo numbers.
 
 ## Language percentages — the important part
 
@@ -46,25 +46,39 @@ Use the [studio](https://halil-hodja.halilozel1903.chatgpt.site) or paste:
 ```html
 <div align="center">
   <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=stats&amp;theme=midnight" alt="GitHub statistics" />
-  <img width="440" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Top languages by code bytes — Readme Stats compatibility" />
+  <img width="500" src="https://halil-hodja.halilozel1903.chatgpt.site/api/card?username=halilozel1903&amp;type=languages&amp;theme=midnight&amp;coverage=legacy100&amp;percentage=shown&amp;langs_count=4" alt="Top languages by code bytes — Readme Stats compatibility" />
 </div>
 ```
 
 Replace the username. For one wide card use `type=overview`. SVGs work without JavaScript or external fonts. GitHub's image proxy may add its own cache delay.
 
-## Other statistics
+## Developer activity cards
 
-- **Repositories:** included public repositories owned by the requested profile.
-- **Stars / forks earned:** sums across those included repositories.
-- **Followers:** profile-wide GitHub follower count.
+Spotlight cards prioritize work over audience size:
 
-The `coverage` option applies to **languages**, not the repository/star/fork totals. Repository exclusions and fork/archive filters apply to both. Private repositories, commits, PRs, contribution streaks, and repositories owned by other users/organizations are not counted. `1,174` versus `1.2k` in another card can simply be number formatting.
+- **Public commits · 365d:** GitHub-credited commit contributions to public repositories across 365 UTC calendar dates, including the collection date. This follows GitHub contribution rules, not every commit on every branch.
+- **Contribution streak:** consecutive active dates in the anonymous public GitHub profile calendar, including commits, PRs, reviews and any anonymized private contribution counts the profile owner has made public. This matches the visible contribution graph rather than only public commits. Today or yesterday may end the current streak (UTC).
+- **Best streak · 365d:** longest contribution streak within the last 365 dates, not an all-time record. **Active commit days** separately counts dates with public commits.
+- **Pull requests:** all-time public PRs authored by the user, including other users' public repositories.
+- **PR merge rate:** merged public authored PRs divided by all public authored PRs; unavailable when there are no PRs.
+
+PR counts are all-time; commit and contribution-streak metrics use a 365-date window. The ring compares the current contribution streak with the best contribution streak in that window. There is no opaque A+/A grade or official GitHub ranking claim.
+
+Private repository nodes are filtered out before counting public commits. The contribution calendar is fetched anonymously and may include publicly disclosed private counts; no private repository details are accessed. If the calendar is incomplete or unavailable, contribution streaks stay unavailable. Commit data is collected in non-overlapping seven-day windows; if a window exceeds GitHub's 100-repository cap or pagination is incomplete, public commit metrics are unavailable rather than fabricated. Unknown values never become successful zeros. When activity data is unavailable, cards use actual repository/star/fork/language counts. Followers remain in the backward-compatible JSON profile but are not displayed on the cards.
+
+Repository/star/fork totals still reflect included public owned repositories. `coverage` affects languages; it does not filter account-wide PR or commit activity. The source time is preserved. Visual scope footnotes were removed from the exported cards; detailed coverage, denominators, dates and definitions remain in SVG accessibility descriptions, studio details, JSON and this guide.
+
+## Appearance
+
+`style=spotlight` is the default, with icon-supported activity tiles and a contribution-streak ring. `style=classic` keeps the quieter layout. `chart=donut` is the default language graphic; `chart=bar` gives each of up to eight languages its own spaced row. Java is gold (`#F7C65C`); Objective-C is blue (`#4DA8FF`).
+
+Spotlight SVGs are **440×360** for activity, **500×360** for languages, and **960×360** for the combined layout. Classic SVGs retain 440×260 / 900×260 dimensions. Every style uses the same underlying data and percentage calculation.
 
 Scans are capped at 1,000 repositories and mark that limit with `scope.truncated`. Compatibility mode deliberately restricts language coverage to its first-100 set and reports `scope.complete=false`. Failed language requests fail the result; they never become a successful partial sum or zero fallback.
 
 ## Data collection and freshness
 
-A full code-size scan can exceed unauthenticated API limits. The official demo therefore uses **real, scheduled GitHub snapshots** for profiles in [`data/profiles.json`](data/profiles.json). [`Refresh public GitHub data`](.github/workflows/refresh-data.yml) runs every six hours using the short-lived GitHub Actions token. It queries only public repositories, records all language bytes, and commits the machine-readable data. No maintainer token is placed on the public web server.
+A full code-size scan can exceed unauthenticated API limits. The official demo therefore uses **real, scheduled GitHub snapshots** for profiles in [`data/profiles.json`](data/profiles.json). [`Refresh public GitHub data`](.github/workflows/refresh-data.yml) runs every six hours using the short-lived GitHub Actions token. It queries public repositories and the anonymous public contribution calendar, records language bytes and activity, and commits the machine-readable data. No maintainer token is placed on the public web server.
 
 The application reads the public snapshot from GitHub, applies the requested filters/coverage, and preserves its original `generatedAt` as `updatedAt`. Snapshots older than 24 hours are rejected, then a real live scan is attempted. The six-hour schedule is best effort; GitHub Actions may delay scheduled runs. A snapshot can therefore be older than six hours, and the timestamp remains visible in the studio. Snapshot age is never disguised as a fresh collection time.
 
@@ -104,7 +118,9 @@ The verifier compares totals, raw language measurements, coverage, JSON percenta
 | --- | --- | --- |
 | `username` | Required | Valid GitHub username, max 39 characters |
 | `type` | `stats` | `stats`, `languages`, `overview` |
-| `theme` | `midnight` | `midnight`, `paper`, `aurora`, `ocean`, `rose`, `terminal` |
+| `theme` | `midnight` | `midnight`, `radical`, `paper`, `aurora`, `ocean`, `rose`, `terminal` |
+| `style` | `spotlight` | `spotlight`, `classic` |
+| `chart` | `donut` | `donut`, `bar` (Spotlight) |
 | `locale` | `en` | `en`, `tr` |
 | `langs_count` | `4` | Integer clamped to 2–8 |
 | `metric` | `bytes` | `bytes`, `repos` |
@@ -164,7 +180,9 @@ To use your own scheduled snapshots: fork the repo, edit `data/profiles.json`, e
 ```text
 app/                         Bilingual studio and API environment adapter
 lib/hodja/github.mjs         Public collection, coverage and byte aggregation
-lib/hodja/cards.mjs          Shared SVG renderer and percentage denominator
+lib/hodja/cards.mjs          SVG styles, icons, charts and percentage denominator
+lib/hodja/activity.mjs       Public commit dates and PR activity
+lib/hodja/calendar.mjs       Anonymous public profile contribution streaks
 lib/hodja/api.mjs            Cache, routing and error contracts
 data/                        Public, timestamped GitHub snapshots
 scripts/refresh-data.mjs     Authenticated snapshot collector

@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 — 2026-10-29
+
+- Redesign the studio with a dark palette, live hero card, seven themes and responsive controls.
+- Add Spotlight activity cards with public commit counts, public-profile contribution streaks, active commit days, authored PRs and merge rate; remove displayed follower counts.
+- Collect public-only activity in bounded UTC windows and keep all-time PR scope explicit.
+- Enlarge language cards, add donut/bar charts, separate Java and Objective-C colors, and fix eight-language row spacing.
+- Add Classic style compatibility and preserve style/chart choices in exports and shared links.
+- Remove visible scope footnotes from cards, retaining details in metadata and documentation.
+
 ## 1.1.0 — 2026-10-28
 
 - Use real code bytes by default with exact Readme Stats first-100 compatibility coverage.
