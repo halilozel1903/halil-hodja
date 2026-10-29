@@ -21,7 +21,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import Github from "@/components/github-icon";
-import { renderCard, themes } from "@/lib/hodja/cards.mjs";
+import { renderCard, themes, cardDimensions } from "@/lib/hodja/cards.mjs";
 
 type Locale = "en" | "tr";
 type Theme = keyof typeof themes;
@@ -32,15 +32,22 @@ const words = {
     studio: "Card studio",
     docs: "Documentation",
     open: "Open source",
-    badge: "A little personality for your profile",
-    heading: "Your GitHub,",
-    emphasis: "beautifully told.",
+    badge: "YOUR CODE DESERVES THE SPOTLIGHT",
+    heading: "Your GitHub.",
+    emphasis: "A little more iconic.",
     intro:
-      "Turn your work into a profile worth sharing. Thoughtful stats, colorful languages, and cards that feel like you.",
+      "Beautiful cards. Real GitHub data. A profile that feels unmistakably yours.",
     config: "Make it yours",
     configSub: "Small details. Your signature.",
     username: "GitHub username",
-    theme: "Choose a mood",
+    theme: "Color palette",
+    style: "Card style",
+    spotlight: "Spotlight",
+    classic: "Classic",
+    chart: "Language chart",
+    donut: "Donut",
+    bars: "Bars",
+    create: "Create your cards",
     count: "Languages to show",
     metric: "Measure languages by",
     coverage: "Repository coverage",
@@ -76,7 +83,7 @@ const words = {
     data: "Good data. No mystery.",
     dataSub: "Know exactly what your cards are saying.",
     public: "Public, by design",
-    publicSub: "Only public repositories. Your private work stays private.",
+    publicSub: "Public repositories and your visible profile contribution calendar.",
     precise: "A clear picture",
     preciseSub: "Real code bytes, with explicit repository coverage.",
     yours: "Yours to build on",
@@ -104,15 +111,21 @@ const words = {
     studio: "Kart stüdyosu",
     docs: "Dokümantasyon",
     open: "Açık kaynak",
-    badge: "Profiline biraz karakter kat",
-    heading: "GitHub hikâyen,",
-    emphasis: "güzel bir anlatımla.",
-    intro:
-      "Emeğini paylaşmaya değer bir profile dönüştür. Anlamlı istatistikler, renkli diller ve seni yansıtan kartlar.",
+    badge: "KODUN SAHNEYİ HAK EDİYOR",
+    heading: "GitHub profilin.",
+    emphasis: "Biraz daha ikonik.",
+    intro: "Şık kartlar. Gerçek GitHub verisi. README’ne kendi imzanı at.",
     config: "Kendi tarzını yarat",
     configSub: "Küçük detaylar. Senin imzan.",
     username: "GitHub kullanıcı adı",
-    theme: "Bir tema seç",
+    theme: "Renk paleti",
+    style: "Kart stili",
+    spotlight: "Spotlight",
+    classic: "Klasik",
+    chart: "Dil grafiği",
+    donut: "Halka",
+    bars: "Çubuk",
+    create: "Kartlarını tasarla",
     count: "Gösterilecek dil sayısı",
     metric: "Dil dağılımını hesapla",
     coverage: "Repo kapsamı",
@@ -148,7 +161,7 @@ const words = {
     data: "Şeffaf veri. Net sonuçlar.",
     dataSub: "Kartlarının ne anlattığını tam olarak bil.",
     public: "Herkese açık veriler",
-    publicSub: "Yalnızca açık repolar. Özel çalışmaların gizli kalır.",
+    publicSub: "Açık repolar ve profilindeki görünür katkı takvimi.",
     precise: "Anlamlı bir görünüm",
     preciseSub: "Kapsamı açıkça belirtilen, gerçek kod baytları.",
     yours: "Geliştirmek için senin",
@@ -179,6 +192,8 @@ export default function Home() {
   const [username, setUsername] = useState("halilozel1903");
   const [theme, setTheme] = useState<Theme>("midnight");
   const [count, setCount] = useState(4);
+  const [style, setStyle] = useState("spotlight");
+  const [chart, setChart] = useState("donut");
   const [metric, setMetric] = useState("bytes");
   const [percentage, setPercentage] = useState("shown");
   const [coverage, setCoverage] = useState("legacy100");
@@ -224,7 +239,10 @@ export default function Home() {
     setBusy(true);
     setError("");
     try {
-      const result = await fetch(`/api/profile?${p}`, { signal: abort.signal });
+      const result = await fetch(`/api/profile?${p}`, {
+        signal: abort.signal,
+        cache: "no-store",
+      });
       const data = (await result.json()) as Profile & { error?: string };
       if (!result.ok)
         throw new Error(data.error || "Could not load GitHub data.");
@@ -245,6 +263,8 @@ export default function Home() {
     const u = p.get("username") || "halilozel1903";
     const m = p.get("metric") === "repos" ? "repos" : "bytes";
     setUsername(u);
+    setStyle(p.get("style") === "classic" ? "classic" : "spotlight");
+    setChart(p.get("chart") === "bar" ? "bar" : "donut");
     setOrigin(window.location.origin);
     setMetric(m);
     const c = p.get("coverage") === "all" ? "all" : "legacy100";
@@ -301,7 +321,15 @@ export default function Home() {
   const types = view === "pair" ? ["stats", "languages"] : [view];
   const svg = (type: string) =>
     profile
-      ? renderCard(profile, { theme, locale, type, count, percentage })
+      ? renderCard(profile, {
+          theme,
+          locale,
+          type,
+          count,
+          percentage,
+          style,
+          chart,
+        })
       : "";
   const baseParams = new URLSearchParams({
     username: profile?.user.login || username,
@@ -309,6 +337,8 @@ export default function Home() {
     locale,
     langs_count: String(count),
     percentage,
+    style,
+    chart,
     coverage: profile?.scope.coverage || coverage,
     metric: profile?.scope.metric || metric,
   });
@@ -321,7 +351,7 @@ export default function Home() {
   );
   const snippet =
     format === "html"
-      ? `<div align="center">\n${urls.map((url, i) => `  <img src="${url.replaceAll("&", "&amp;")}" width="${types[i] === "overview" ? 900 : 440}" alt="${types[i] === "languages" ? "Top languages" : "GitHub statistics"} — ${profile?.user.login || username}" />`).join("\n")}\n</div>`
+      ? `<div align="center">\n${urls.map((url, i) => `  <img src="${url.replaceAll("&", "&amp;")}" width="${cardDimensions(types[i], style).width}" alt="${types[i] === "languages" ? "Top languages" : "GitHub statistics"} — ${profile?.user.login || username}" />`).join("\n")}\n</div>`
       : format === "url"
         ? urls.join("\n")
         : urls
@@ -353,7 +383,7 @@ export default function Home() {
   }
 
   return (
-    <div className="site-shell">
+    <div className="site-shell" data-palette={theme}>
       <header className="header">
         <a href="#" className="brand" aria-label="Halil Hodja home">
           <span className="brand-mark">
@@ -405,12 +435,27 @@ export default function Home() {
               <em>{t.emphasis}</em>
             </h1>
             <p>{t.intro}</p>
+            <div className="hero-cta">
+              <a className="hero-primary" href="#studio">
+                {t.create}
+                <ArrowUpRight size={18} />
+              </a>
+              <a
+                className="hero-secondary"
+                href={source}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={16} />
+                {t.open}
+              </a>
+            </div>
             <div className="hero-meta">
               <span>
                 <Check size={13} /> SVG cards
               </span>
               <span>
-                <Check size={13} /> 6{" "}
+                <Check size={13} /> {Object.keys(themes).length}{" "}
                 {locale === "tr" ? "tema" : "curated themes"}
               </span>
               <span>
@@ -420,22 +465,35 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-art" aria-hidden="true">
-            <div className="orbit o1" />
-            <div className="orbit o2" />
-            <div className="orbit o3" />
+            <div className="orb orb-one" />
+            <div className="orb orb-two" />
+            <div className="art-grid" />
             <div className="art-label">
-              <span className="green-dot" /> BUILT DIFFERENT. BUILT FOR YOU.
+              <span className="green-dot" /> REAL DATA. MAIN CHARACTER ENERGY.
             </div>
-            <div className="code-tile">
-              <Code2 size={40} strokeWidth={1.4} />
+            <div className="hero-card-frame">
+              {profile ? (
+                <img
+                  src={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(renderCard(profile, { theme, locale, type: "stats", style: "spotlight" }))}`}
+                  alt=""
+                  width="440"
+                  height="360"
+                />
+              ) : (
+                <div className="hero-card-placeholder">
+                  <Code2 size={60} />
+                </div>
+              )}
             </div>
-            <div className="spark s1">✦</div>
-            <div className="spark s2">✳</div>
             <div className="mini-tag tag-one">
-              <Star size={13} /> a little more you
+              <Sparkles size={14} />
+              {locale === "tr"
+                ? "Tamamen senin tarzın."
+                : "Entirely your kind of energy."}
             </div>
-            <div className="mini-tag tag-two">&lt; your next chapter /&gt;</div>
-            <div className="art-coordinates">OPEN SOURCE / SINCE 2026</div>
+            <div className="mini-tag tag-two">
+              <span className="green-dot" /> SVG / README READY
+            </div>
           </div>
         </section>
 
@@ -449,7 +507,7 @@ export default function Home() {
           >
             <div className="panel-heading">
               <div>
-                <span className="section-index">01 / CUSTOMIZE</span>
+                <span className="section-index">01 / DESIGN</span>
                 <h2>{t.config}</h2>
                 <p>{t.configSub}</p>
               </div>
@@ -472,6 +530,31 @@ export default function Home() {
                 required
               />
             </div>
+            <fieldset className="style-field">
+              <legend className="field-label">{t.style}</legend>
+              <div className="style-options">
+                {[
+                  ["spotlight", t.spotlight],
+                  ["classic", t.classic],
+                ].map(([key, label]) => (
+                  <button
+                    type="button"
+                    key={key}
+                    className={style === key ? "selected" : ""}
+                    aria-pressed={style === key}
+                    onClick={() => setStyle(key)}
+                  >
+                    <span className={`style-thumbnail thumb-${key}`}>
+                      <i />
+                      <b />
+                      <em />
+                    </span>
+                    <span>{label}</span>
+                    {style === key && <Check size={12} />}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
             <fieldset className="theme-field">
               <legend className="field-label">
                 {t.theme}
@@ -504,48 +587,34 @@ export default function Home() {
                 ))}
               </div>
             </fieldset>
-            <label className="field-label" htmlFor="metric">
-              {t.metric}
-            </label>
-            <div className="select-wrap">
-              <select
-                id="metric"
-                value={metric}
-                onChange={(e) => setMetric(e.target.value)}
-              >
-                <option value="repos">{t.repos}</option>
-                <option value="bytes">{t.bytes}</option>
-              </select>
-              <ChevronDown size={14} />
-            </div>
-            <label className="field-label" htmlFor="coverage">
-              {t.coverage}
-            </label>
-            <div className="select-wrap">
-              <select
-                id="coverage"
-                value={coverage}
-                onChange={(e) => setCoverage(e.target.value)}
-              >
-                <option value="all">{t.full}</option>
-                <option value="legacy100">{t.legacy}</option>
-              </select>
-              <ChevronDown size={14} />
-            </div>
-            <label className="field-label" htmlFor="percentage">
-              {t.percentage}
-            </label>
-            <div className="select-wrap">
-              <select
-                id="percentage"
-                value={percentage}
-                onChange={(e) => setPercentage(e.target.value)}
-              >
-                <option value="shown">{t.shown}</option>
-                <option value="all">{t.all}</option>
-              </select>
-              <ChevronDown size={14} />
-            </div>
+            {style === "spotlight" && (
+              <>
+                <label className="field-label" htmlFor="chart">
+                  {t.chart}
+                </label>
+                <div
+                  className="chart-options"
+                  role="group"
+                  aria-label={t.chart}
+                >
+                  {[
+                    ["donut", t.donut],
+                    ["bar", t.bars],
+                  ].map(([key, label]) => (
+                    <button
+                      type="button"
+                      key={key}
+                      aria-pressed={chart === key}
+                      className={chart === key ? "selected" : ""}
+                      onClick={() => setChart(key)}
+                    >
+                      <span className={`chart-icon chart-${key}`} />
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
             <div className="count-label">
               <label className="field-label" htmlFor="count">
                 {t.count}
@@ -570,7 +639,49 @@ export default function Home() {
               <summary>
                 {t.filters}
                 <ChevronDown size={14} />
-              </summary>
+              </summary>{" "}
+              <label className="field-label" htmlFor="metric">
+                {t.metric}
+              </label>
+              <div className="select-wrap">
+                <select
+                  id="metric"
+                  value={metric}
+                  onChange={(e) => setMetric(e.target.value)}
+                >
+                  <option value="repos">{t.repos}</option>
+                  <option value="bytes">{t.bytes}</option>
+                </select>
+                <ChevronDown size={14} />
+              </div>
+              <label className="field-label" htmlFor="coverage">
+                {t.coverage}
+              </label>
+              <div className="select-wrap">
+                <select
+                  id="coverage"
+                  value={coverage}
+                  onChange={(e) => setCoverage(e.target.value)}
+                >
+                  <option value="all">{t.full}</option>
+                  <option value="legacy100">{t.legacy}</option>
+                </select>
+                <ChevronDown size={14} />
+              </div>
+              <label className="field-label" htmlFor="percentage">
+                {t.percentage}
+              </label>
+              <div className="select-wrap">
+                <select
+                  id="percentage"
+                  value={percentage}
+                  onChange={(e) => setPercentage(e.target.value)}
+                >
+                  <option value="shown">{t.shown}</option>
+                  <option value="all">{t.all}</option>
+                </select>
+                <ChevronDown size={14} />
+              </div>
               <label className="check-row">
                 <input
                   type="checkbox"
@@ -615,7 +726,7 @@ export default function Home() {
           <div className="workspace">
             <div className="canvas-heading">
               <div>
-                <span className="section-index">02 / PREVIEW</span>
+                <span className="section-index">02 / LIVE CANVAS</span>
                 <h2>{t.preview}</h2>
               </div>
               <span className="live-indicator">
@@ -680,8 +791,8 @@ export default function Home() {
                       key={type}
                       src={`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg(type))}`}
                       alt={`${profile.user.login} ${type === "languages" ? t.languages : t.stats}`}
-                      width={type === "overview" ? 900 : 440}
-                      height={260}
+                      width={cardDimensions(type, style).width}
+                      height={cardDimensions(type, style).height}
                     />
                   ))}
                 </div>
@@ -692,13 +803,6 @@ export default function Home() {
                   <p>{t.emptySub}</p>
                 </div>
               )}
-              <div className="canvas-bottom">
-                <span>
-                  <span className="green-dot" />{" "}
-                  {themes[theme].label.toUpperCase()} / SVG
-                </span>
-                <span>CRAFTED BY HALIL HODJA</span>
-              </div>
             </div>
             <div className="preview-meta">
               <span>
@@ -826,6 +930,13 @@ export default function Home() {
                 <ChevronDown size={14} />
               </summary>
               <p>
+                {profile.activity && (
+                  <span className="activity-scope">
+                    {locale === "tr"
+                      ? `Açık commit sayısı ${profile.activity.period.from.slice(0, 10)}–${profile.activity.period.to.slice(0, 10)} arasındaki 365 UTC takvim günüdür. Katkı serisi, herkese açık profil takviminden hesaplanır; görünür anonim özel katkıları da içerebilir. Bugün veya dün aktifse sürer; en uzun seri son 365 günle sınırlıdır. PR ve birleşme sayıları tüm zamanların herkese açık PR'larıdır.`
+                      : `Public commit counts cover 365 UTC dates (${profile.activity.period.from.slice(0, 10)}–${profile.activity.period.to.slice(0, 10)}). Contribution streaks use the anonymous public profile calendar, including any publicly disclosed private counts. Current streaks may end today or yesterday; the best streak covers 365 dates. PR and merge counts use all-time public PRs.`}
+                  </span>
+                )}
                 {locale === "tr"
                   ? `${profile.scope.scanned} açık repo tarandı; ${profile.scope.included} repo hesaplamaya dahil edildi. Yıldızlar ve fork sayıları bu repoların toplamıdır. Takipçi sayısı profil genelindedir.`
                   : `${profile.scope.scanned} public repositories scanned; ${profile.scope.included} included. Stars and forks are totals across included repositories. Followers are profile-wide.`}
@@ -849,8 +960,8 @@ export default function Home() {
               )}
               <p>
                 {locale === "tr"
-                  ? "Fork repoları varsayılan olarak hariç, arşivlenmiş repolar dahildir. Commit, katkı ve özel repo sayıları hesaplanmaz. Varsayılan yüzde, gösterilen dillerin bayt toplamı üzerinden hesaplanır; tüm dilleri payda olarak kullanmak için yukarıdaki seçeneği değiştir."
-                  : "Forks are excluded and archived repos are included by default. Commits, contributions and private repos are not counted. By default, percentages use the bytes of displayed languages as the denominator. Choose all detected languages above to include hidden languages in the denominator."}
+                  ? "Fork repoları varsayılan olarak hariç, arşivlenmiş repolar dahildir. Aktivite kartı açık commitleri ve herkese açık profil takvimindeki katkı serisini kullanır. Özel repo ayrıntıları okunmaz. Varsayılan yüzde, gösterilen dillerin bayt toplamı üzerinden hesaplanır; tüm dilleri payda olarak kullanmak için yukarıdaki seçeneği değiştir."
+                  : "Forks are excluded and archived repos are included by default. Activity cards use public commits and the public profile contribution streak. Private repository details are not accessed. By default, percentages use the bytes of displayed languages as the denominator. Choose all detected languages above to include hidden languages in the denominator."}
               </p>
               {profile.scope.truncated && (
                 <p role="note">

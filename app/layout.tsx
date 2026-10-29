@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Halil Hodja — Your GitHub, beautifully told.",
+  title: "Halil Hodja — Put your code in the spotlight.",
   description:
-    "Create beautiful, honest GitHub stats and language cards. Live previews, six themes, and README-ready SVGs. Free and open source.",
+    "Create beautiful, honest GitHub stats and language cards. Public commit streaks, seven themes, and README-ready SVGs. Free and open source.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
