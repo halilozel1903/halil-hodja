@@ -365,6 +365,7 @@ test("authenticated full scans use paginated public GraphQL data and reject priv
   const s = await collectSnapshot("test-user", {
     fetcher,
     token: "test-secret",
+    calendarFetcher: async () => new Response("", {status: 503}),
   });
   assert.match(queryBody.query, /privacy:PUBLIC/);
   assert.equal(s.repos.length, 1);

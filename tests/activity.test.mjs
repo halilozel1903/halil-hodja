@@ -112,6 +112,8 @@ const profile = {
   activity: {
     publicCommits: 37,
     currentStreakDays: 3,
+    currentContributionStreakDays: 9,
+    longestContributionStreakDays: 12,
     longestStreakDays: 7,
     activeCommitDays: 9,
     pullRequests: 12,
@@ -129,7 +131,7 @@ test("activity cards show real commit and PR metrics without a follower count or
   const svg = renderCard(profile, { type: "stats" });
   assert.match(svg, /37/);
   assert.match(svg, /75.0%/);
-  assert.match(svg, /Commit streak/);
+  assert.match(svg, /Contribution streak/);
   assert.ok(!svg.includes("99999"));
   assert.ok(!svg.includes("A+"));
   assert.match(svg, /Public commits · 365d/);
