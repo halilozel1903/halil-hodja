@@ -1,8 +1,8 @@
 {
   "activity": {
-    "currentStreakDays": 17,
-    "longestStreakDays": 17,
-    "activeCommitDays": 86,
+    "currentStreakDays": 18,
+    "longestStreakDays": 18,
+    "activeCommitDays": 87,
     "dailyPublicCommits": {
       "2025-11-21": 14,
       "2025-12-11": 2,
@@ -89,23 +89,24 @@
       "2026-11-10": 2,
       "2026-11-09": 2,
       "2026-11-08": 3,
-      "2026-11-07": 3
+      "2026-11-07": 3,
+      "2026-11-14": 1
     },
-    "publicCommits": 1418,
-    "pullRequests": 284,
+    "publicCommits": 1419,
+    "pullRequests": 285,
     "mergedPullRequests": 262,
     "reviewedPullRequests": 1,
     "commitCoverageComplete": true,
     "period": {
       "from": "2025-11-15T00:00:00.000Z",
-      "to": "2026-11-14T06:26:02.751Z",
+      "to": "2026-11-14T18:04:19.512Z",
       "days": 365
     },
     "definition": "public-default-branch-commit-contributions; public-authored-PRs-all-time; distinct-public-PRs-reviewed-all-time",
-    "currentContributionStreakDays": 49,
-    "longestContributionStreakDays": 49,
-    "activeContributionDays": 159,
-    "totalProfileContributions": 2826,
+    "currentContributionStreakDays": 50,
+    "longestContributionStreakDays": 50,
+    "activeContributionDays": 160,
+    "totalProfileContributions": 2828,
     "dailyProfileContributions": {
       "2025-11-15": 0,
       "2025-11-16": 0,
@@ -471,7 +472,7 @@
       "2026-11-11": 2,
       "2026-11-12": 2,
       "2026-11-13": 2,
-      "2026-11-14": 0
+      "2026-11-14": 2
     },
     "contributionPeriod": {
       "from": "2025-11-15",
@@ -483,7 +484,7 @@
   },
   "schemaVersion": 3,
   "username": "halilozel1903",
-  "generatedAt": "2026-11-14T06:26:08.965Z",
+  "generatedAt": "2026-11-14T18:04:25.522Z",
   "truncated": false,
   "legacyRepositoryNames": [
     "SwingExamples",
@@ -599,6 +600,24 @@
   },
   "repos": [
     {
+      "name": "AndroidTVMovieParadise",
+      "created_at": "2019-12-01T16:45:40Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 226,
+      "forks_count": 71,
+      "pushed_at": "2026-11-14T18:03:33Z",
+      "language": "Java",
+      "languages": {
+        "Java": 218964,
+        "Shell": 2038
+      }
+    },
+    {
       "name": "halil-hodja",
       "created_at": "2026-10-28T17:20:32Z",
       "private": false,
@@ -609,7 +628,7 @@
       "archived": false,
       "stargazers_count": 0,
       "forks_count": 0,
-      "pushed_at": "2026-11-13T19:44:59Z",
+      "pushed_at": "2026-11-14T06:26:09Z",
       "language": "JavaScript",
       "languages": {
         "TypeScript": 61505,
@@ -2772,7 +2791,7 @@
       },
       "fork": false,
       "archived": false,
-      "stargazers_count": 117,
+      "stargazers_count": 116,
       "forks_count": 21,
       "pushed_at": "2026-09-12T15:09:18Z",
       "language": "Kotlin",
@@ -2789,31 +2808,13 @@
       },
       "fork": false,
       "archived": false,
-      "stargazers_count": 151,
+      "stargazers_count": 150,
       "forks_count": 32,
       "pushed_at": "2026-07-09T08:23:47Z",
       "language": "Swift",
       "languages": {
         "Swift": 298759,
         "Ruby": 909
-      }
-    },
-    {
-      "name": "AndroidTVMovieParadise",
-      "created_at": "2019-12-01T16:45:40Z",
-      "private": false,
-      "owner": {
-        "login": "halilozel1903"
-      },
-      "fork": false,
-      "archived": false,
-      "stargazers_count": 225,
-      "forks_count": 71,
-      "pushed_at": "2026-07-04T22:30:32Z",
-      "language": "Java",
-      "languages": {
-        "Java": 218964,
-        "Shell": 2038
       }
     },
     {
