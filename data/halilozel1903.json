@@ -1,8 +1,8 @@
 {
   "activity": {
-    "currentStreakDays": 26,
-    "longestStreakDays": 26,
-    "activeCommitDays": 94,
+    "currentStreakDays": 27,
+    "longestStreakDays": 27,
+    "activeCommitDays": 95,
     "dailyPublicCommits": {
       "2025-12-11": 2,
       "2025-12-15": 1,
@@ -97,23 +97,24 @@
       "2026-11-19": 5,
       "2026-11-18": 2,
       "2026-11-17": 2,
-      "2026-11-16": 2
+      "2026-11-16": 2,
+      "2026-11-23": 5
     },
-    "publicCommits": 1459,
+    "publicCommits": 1464,
     "pullRequests": 285,
     "mergedPullRequests": 263,
     "reviewedPullRequests": 1,
     "commitCoverageComplete": true,
     "period": {
       "from": "2025-11-24T00:00:00.000Z",
-      "to": "2026-11-23T07:41:31.038Z",
+      "to": "2026-11-23T23:55:13.929Z",
       "days": 365
     },
     "definition": "public-default-branch-commit-contributions; public-authored-PRs-all-time; distinct-public-PRs-reviewed-all-time",
-    "currentContributionStreakDays": 58,
-    "longestContributionStreakDays": 58,
-    "activeContributionDays": 166,
-    "totalProfileContributions": 2903,
+    "currentContributionStreakDays": 59,
+    "longestContributionStreakDays": 59,
+    "activeContributionDays": 167,
+    "totalProfileContributions": 2908,
     "dailyProfileContributions": {
       "2025-11-24": 0,
       "2025-11-25": 0,
@@ -412,7 +413,7 @@
       "2026-09-14": 130,
       "2026-09-15": 2,
       "2026-09-16": 0,
-      "2026-09-17": 32,
+      "2026-09-17": 31,
       "2026-09-18": 16,
       "2026-09-19": 16,
       "2026-09-20": 45,
@@ -479,7 +480,7 @@
       "2026-11-20": 6,
       "2026-11-21": 4,
       "2026-11-22": 15,
-      "2026-11-23": 0
+      "2026-11-23": 6
     },
     "contributionPeriod": {
       "from": "2025-11-24",
@@ -491,7 +492,7 @@
   },
   "schemaVersion": 3,
   "username": "halilozel1903",
-  "generatedAt": "2026-11-23T07:41:37.293Z",
+  "generatedAt": "2026-11-23T23:55:21.039Z",
   "truncated": false,
   "legacyRepositoryNames": [
     "SwingExamples",
@@ -601,11 +602,31 @@
     "name": "Halil Özel",
     "avatar": "https://avatars.githubusercontent.com/u/22895813?v=4",
     "bio": "Android Developer 👨🏻‍💻",
-    "followers": 774,
-    "publicRepos": 242,
+    "followers": 775,
+    "publicRepos": 243,
     "url": "https://github.com/halilozel1903"
   },
   "repos": [
+    {
+      "name": "tempo-video-speed-controller",
+      "created_at": "2026-11-23T09:39:50Z",
+      "private": false,
+      "owner": {
+        "login": "halilozel1903"
+      },
+      "fork": false,
+      "archived": false,
+      "stargazers_count": 2,
+      "forks_count": 0,
+      "pushed_at": "2026-11-23T09:53:51Z",
+      "language": "JavaScript",
+      "languages": {
+        "JavaScript": 25373,
+        "CSS": 5296,
+        "HTML": 2717,
+        "Python": 7071
+      }
+    },
     {
       "name": "halil-hodja",
       "created_at": "2026-10-28T17:20:32Z",
@@ -617,7 +638,7 @@
       "archived": false,
       "stargazers_count": 0,
       "forks_count": 0,
-      "pushed_at": "2026-11-22T19:42:53Z",
+      "pushed_at": "2026-11-23T07:41:38Z",
       "language": "JavaScript",
       "languages": {
         "TypeScript": 61505,
